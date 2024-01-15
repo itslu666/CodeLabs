@@ -28,12 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            dataGridView1 = new DataGridView();
+            nummer = new DataGridViewTextBoxColumn();
+            name = new DataGridViewTextBoxColumn();
+            nachname = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nummer, name, nachname });
+            dataGridView1.Location = new Point(168, 101);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(468, 201);
+            dataGridView1.TabIndex = 0;
+            // 
+            // nummer
+            // 
+            nummer.HeaderText = "nummer";
+            nummer.Name = "nummer";
+            // 
+            // name
+            // 
+            name.HeaderText = "name";
+            name.Name = "name";
+            // 
+            // nachname
+            // 
+            nachname.HeaderText = "nachname";
+            nachname.Name = "nachname";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn nummer;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn nachname;
     }
 }
