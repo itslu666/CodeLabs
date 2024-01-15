@@ -8,7 +8,12 @@ namespace Project
             
             DB_Connector connector = new DB_Connector();
 
-            connector.connect();
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
