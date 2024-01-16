@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.tbusername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,10 +42,11 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbpassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,14 +64,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(877, 44);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Location = new System.Drawing.Point(53, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.Size = new System.Drawing.Size(136, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Code Labs";
             // 
@@ -84,22 +100,26 @@
             this.button1.Size = new System.Drawing.Size(48, 44);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // LoginButton
             // 
-            this.button2.Location = new System.Drawing.Point(53, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 51);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoginButton.Location = new System.Drawing.Point(53, 291);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(208, 51);
+            this.LoginButton.TabIndex = 1;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // textBox1
+            // tbusername
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 23);
-            this.textBox1.TabIndex = 2;
+            this.tbusername.Location = new System.Drawing.Point(39, 166);
+            this.tbusername.Name = "tbusername";
+            this.tbusername.Size = new System.Drawing.Size(256, 23);
+            this.tbusername.TabIndex = 2;
             // 
             // label1
             // 
@@ -107,7 +127,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(115, 105);
+            this.label1.Location = new System.Drawing.Point(115, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 33);
             this.label1.TabIndex = 3;
@@ -122,12 +142,12 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.LoginButton);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.tbpassword);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.tbusername);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(0, 43);
             this.panel2.Name = "panel2";
@@ -179,25 +199,29 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(39, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(65, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Password";
             // 
-            // textBox2
+            // tbpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(39, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 23);
-            this.textBox2.TabIndex = 5;
+            this.tbpassword.Location = new System.Drawing.Point(39, 220);
+            this.tbpassword.Name = "tbpassword";
+            this.tbpassword.Size = new System.Drawing.Size(256, 23);
+            this.tbpassword.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(39, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Username";
             // 
@@ -227,8 +251,10 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -243,8 +269,8 @@
         private Panel panel1;
         private Button button1;
         private Label label2;
-        private Button button2;
-        private TextBox textBox1;
+        private Button LoginButton;
+        private TextBox tbusername;
         private Label label1;
         private Panel panel2;
         private PictureBox pictureBox2;
@@ -252,8 +278,9 @@
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel1;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox tbpassword;
         private Label label3;
         private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }
