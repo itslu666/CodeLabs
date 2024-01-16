@@ -73,30 +73,21 @@ namespace Project
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            List<string> loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM mitarbeiter");
-
-            string messageToShow = string.Join(Environment.NewLine, loginData);
-            MessageBox.Show(messageToShow);
+            List<string> loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT M_Nr, passwort FROM mitarbeiter");
 
             foreach (string item in loginData)
             {
-                if (tbusername.Text == item[0].ToString() && tbpassword.Text == item[4].ToString())
-                {
-                    MessageBox.Show("Login Success");
+                string employee = item;
 
+                if (tbusername.Text == employee.Split(" ")[0] && tbpassword.Text == employee.Split(" ")[0])
+                {
+                    MainWindow mw = new MainWindow();
+                    mw.ShowDialog();
                 }
                 else
                 {
-
-                    MessageBox.Show("Login failed");
+                    MessageBox.Show("Failed");
                 }
-            }
-
-            if(tbusername.Text == "")
-            {
-                MessageBox.Show("Invalid Username");
-                tbusername.Focus();
-                return;
             }
             
             if (tbpassword.Text == "")

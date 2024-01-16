@@ -18,7 +18,7 @@ namespace Project
                 try
                 {
                     conn.Open();
-                    MessageBox.Show("Connection Open!");
+                    Console.WriteLine("Connected");
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -41,7 +41,7 @@ namespace Project
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Fehler: " + ex.ToString());
                 }
             }
 
