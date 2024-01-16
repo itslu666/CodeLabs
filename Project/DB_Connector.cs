@@ -9,27 +9,33 @@ namespace Project
 {
     public class DB_Connector
     {
-        // 
-        public List<string> GetData(string conString)
+        public List<string> GetData(string conString, string query)
         {
-            string connectionString = "server=localhost;database=a1;uid=root;pwd=;";
             List<string> resultData = new List<string>();
-            
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+
+            using (MySqlConnection conn = new MySqlConnection(conString))
             {
                 try
                 {
                     conn.Open();
                     MessageBox.Show("Connection Open!");
 
-                    string query = "SELECT columnName FROM yourTable";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
+                        int columnCount = reader.FieldCount;
+
                         while (reader.Read())
                         {
-                            resultData.Add(reader.GetString("columnName"));
+                            StringBuilder rowStringBuilder = new StringBuilder();
+
+                            for (int i = 0; i < columnCount; i++)
+                            {
+                                rowStringBuilder.Append(reader[i].ToString() + " ");
+                            }
+
+                            resultData.Add(rowStringBuilder.ToString());
                         }
                     }
                 }
@@ -41,5 +47,6 @@ namespace Project
 
             return resultData;
         }
+
     }
 }

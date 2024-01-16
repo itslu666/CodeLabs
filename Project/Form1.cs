@@ -7,13 +7,11 @@ namespace Project
 {
     public partial class Form1 : Form
     {
+        DB_Connector connector = new DB_Connector();
+
         public Form1()
         {
             InitializeComponent();
-
-            DB_Connector connector = new DB_Connector();
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,6 +33,8 @@ namespace Project
         private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool ReleaseCapture();
+
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -73,14 +73,23 @@ namespace Project
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(tbusername.Text == "" && tbpassword.Text == "")
-            {
-                MessageBox.Show("Invalid Username or Password");
+            List<string> loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM mitarbeiter");
 
-            }
-            else
+            string messageToShow = string.Join(Environment.NewLine, loginData);
+            MessageBox.Show(messageToShow);
+
+            foreach (string item in loginData)
             {
-                //PJ du opfer
+                if (tbusername.Text == item[0].ToString() && tbpassword.Text == item[4].ToString())
+                {
+                    MessageBox.Show("Login Success");
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Login failed");
+                }
             }
 
             if(tbusername.Text == "")
@@ -96,6 +105,11 @@ namespace Project
                 tbpassword.Focus();
                 return;
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
