@@ -5,18 +5,27 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class LoginWindow : Form
     {
-        DB_Connector connector = new DB_Connector();
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // instance of connector
+        DB_Connector connector = new DB_Connector();
+
+        public LoginWindow()
+        {
+            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,11 +44,9 @@ namespace Project
         private static extern bool ReleaseCapture();
 
         
-
+        // mby zu LoginWindow ändern wenn nicht funktioniert
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             int radius = 40;
 
@@ -50,11 +57,6 @@ namespace Project
 
             this.Region = new Region(path); //Create a region with the rounded rectangle path and apply it to the form 
 
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -73,34 +75,37 @@ namespace Project
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            // get data from database
             List<string> loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT M_Nr, passwort FROM mitarbeiter");
 
-            foreach (string item in loginData)
+            foreach (string employee in loginData)
             {
-                string employee = item;
+                // show employees for debug
+                // MessageBox.Show(employee);
 
-                if (tbusername.Text == employee.Split(" ")[0] && tbpassword.Text == employee.Split(" ")[0])
+                // split username and password
+                string[] credentials = employee.Split(" ");
+
+                // check if username and pw
+                if (tbusername.Text == credentials[0] && tbpassword.Text == credentials[1])
                 {
-                    MainWindow mw = new MainWindow();
-                    mw.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Failed");
+                    // set dialogResult to OK to close login and show main window
+                    this.DialogResult = DialogResult.OK;
+                    return;
                 }
             }
-            
-            if (tbpassword.Text == "")
-            {
-                MessageBox.Show("Invalid Password");
-                tbpassword.Focus();
-                return;
-            }
+
+            // failed to login msg
+            MessageBox.Show("Login failed. Invalid username or password.");
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void tbpassword_KeyDown_1(object sender, KeyEventArgs e)
         {
-            
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Login using enter key
+                LoginButton_Click(sender, e);
+            }
         }
     }
 }
