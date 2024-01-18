@@ -39,7 +39,7 @@
             this.ChatBot_Panel = new System.Windows.Forms.Panel();
             this.PBChatBot = new System.Windows.Forms.PictureBox();
             this.ChatBot = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PBLogo = new System.Windows.Forms.PictureBox();
             this.Settings_Panel = new System.Windows.Forms.Panel();
             this.PBSettings = new System.Windows.Forms.PictureBox();
             this.settings = new System.Windows.Forms.Label();
@@ -50,6 +50,14 @@
             this.CloseMain = new System.Windows.Forms.Button();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PBLogo2 = new System.Windows.Forms.PictureBox();
+            this.Spieletraum_Mainwindow = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Mainpage = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.Dashboard_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBDashboard)).BeginInit();
@@ -57,21 +65,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBImport)).BeginInit();
             this.ChatBot_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBChatBot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.Settings_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).BeginInit();
             this.Logout_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.Dashboard_Panel);
             this.panel1.Controls.Add(this.Import_Panel);
             this.panel1.Controls.Add(this.ChatBot_Panel);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.PBLogo);
             this.panel1.Controls.Add(this.Settings_Panel);
             this.panel1.Controls.Add(this.Logout_Panel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -192,15 +204,15 @@
             this.ChatBot.MouseEnter += new System.EventHandler(this.ChatBot_Panel_MouseEnter);
             this.ChatBot.MouseLeave += new System.EventHandler(this.ChatBot_Panel_MouseLeave);
             // 
-            // pictureBox2
+            // PBLogo
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(51, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 96);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.PBLogo.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo.Image")));
+            this.PBLogo.Location = new System.Drawing.Point(51, 48);
+            this.PBLogo.Name = "PBLogo";
+            this.PBLogo.Size = new System.Drawing.Size(100, 96);
+            this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBLogo.TabIndex = 7;
+            this.PBLogo.TabStop = false;
             // 
             // Settings_Panel
             // 
@@ -313,6 +325,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel2.Controls.Add(this.PBLogo2);
+            this.panel2.Controls.Add(this.Spieletraum_Mainwindow);
             this.panel2.Controls.Add(this.CloseMain);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(218, 0);
@@ -321,6 +335,64 @@
             this.panel2.TabIndex = 5;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // PBLogo2
+            // 
+            this.PBLogo2.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo2.Image")));
+            this.PBLogo2.Location = new System.Drawing.Point(15, 4);
+            this.PBLogo2.Name = "PBLogo2";
+            this.PBLogo2.Size = new System.Drawing.Size(37, 33);
+            this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBLogo2.TabIndex = 8;
+            this.PBLogo2.TabStop = false;
+            // 
+            // Spieletraum_Mainwindow
+            // 
+            this.Spieletraum_Mainwindow.AutoSize = true;
+            this.Spieletraum_Mainwindow.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Spieletraum_Mainwindow.ForeColor = System.Drawing.Color.White;
+            this.Spieletraum_Mainwindow.Location = new System.Drawing.Point(67, 4);
+            this.Spieletraum_Mainwindow.Name = "Spieletraum_Mainwindow";
+            this.Spieletraum_Mainwindow.Size = new System.Drawing.Size(427, 29);
+            this.Spieletraum_Mainwindow.TabIndex = 1;
+            this.Spieletraum_Mainwindow.Text = "SpieleTraum Management Program";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(1283, 295);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.Mainpage);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(0, 180);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(218, 75);
+            this.panel3.TabIndex = 10;
+            // 
+            // Mainpage
+            // 
+            this.Mainpage.AutoSize = true;
+            this.Mainpage.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Mainpage.ForeColor = System.Drawing.Color.White;
+            this.Mainpage.Location = new System.Drawing.Point(58, 25);
+            this.Mainpage.Name = "Mainpage";
+            this.Mainpage.Size = new System.Drawing.Size(114, 23);
+            this.Mainpage.TabIndex = 0;
+            this.Mainpage.Text = "Mainpage";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -328,6 +400,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1567, 790);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -348,7 +421,7 @@
             this.ChatBot_Panel.ResumeLayout(false);
             this.ChatBot_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBChatBot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).EndInit();
             this.Settings_Panel.ResumeLayout(false);
             this.Settings_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).EndInit();
@@ -356,6 +429,11 @@
             this.Logout_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +449,7 @@
         private Panel Settings_Panel;
         private PictureBox PBSettings;
         private Label settings;
-        private PictureBox pictureBox2;
+        private PictureBox PBLogo;
         private Panel Dashboard_Panel;
         private PictureBox PBDashboard;
         private Panel ChatBot_Panel;
@@ -384,5 +462,13 @@
         private Label Dashboard;
         private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private Panel panel2;
+        private PictureBox PBLogo2;
+        private Label Spieletraum_Mainwindow;
+        private Panel panel3;
+        private Label Mainpage;
+        private PictureBox pictureBox1;
+        private MonthCalendar monthCalendar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
