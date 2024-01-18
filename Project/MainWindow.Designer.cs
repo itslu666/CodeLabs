@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Mainpage = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Dashboard_Panel = new System.Windows.Forms.Panel();
             this.Dashboard = new System.Windows.Forms.Label();
             this.PBDashboard = new System.Windows.Forms.PictureBox();
@@ -52,13 +55,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Mainwindow = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Mainpage = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.PanelContainer = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.testtext = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Dashboard_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBDashboard)).BeginInit();
             this.Import_Panel.SuspendLayout();
@@ -72,8 +78,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelContainer.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,6 +100,38 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.Mainpage);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(0, 180);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(218, 75);
+            this.panel3.TabIndex = 10;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // Mainpage
+            // 
+            this.Mainpage.AutoSize = true;
+            this.Mainpage.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Mainpage.ForeColor = System.Drawing.Color.White;
+            this.Mainpage.Location = new System.Drawing.Point(67, 26);
+            this.Mainpage.Name = "Mainpage";
+            this.Mainpage.Size = new System.Drawing.Size(72, 23);
+            this.Mainpage.TabIndex = 0;
+            this.Mainpage.Text = "Home";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Dashboard_Panel
             // 
             this.Dashboard_Panel.BackColor = System.Drawing.Color.Transparent;
@@ -102,6 +141,7 @@
             this.Dashboard_Panel.Name = "Dashboard_Panel";
             this.Dashboard_Panel.Size = new System.Drawing.Size(218, 75);
             this.Dashboard_Panel.TabIndex = 6;
+            this.Dashboard_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Dashboard_Panel_Paint);
             this.Dashboard_Panel.MouseEnter += new System.EventHandler(this.Dashboard_MouseHover);
             this.Dashboard_Panel.MouseLeave += new System.EventHandler(this.Dashboard_Panel_MouseLeave);
             // 
@@ -356,42 +396,54 @@
             this.Spieletraum_Mainwindow.TabIndex = 1;
             this.Spieletraum_Mainwindow.Text = "SpieleTraum Management Program";
             // 
-            // monthCalendar1
+            // PanelContainer
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(1283, 295);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 6;
+            this.PanelContainer.Controls.Add(this.testtext);
+            this.PanelContainer.Controls.Add(this.panel4);
+            this.PanelContainer.Controls.Add(this.dataGridView1);
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(218, 44);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1349, 746);
+            this.PanelContainer.TabIndex = 6;
             // 
-            // panel3
+            // panel4
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.Mainpage);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(0, 180);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 75);
-            this.panel3.TabIndex = 10;
+            this.panel4.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(83, 323);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(218, 75);
+            this.panel4.TabIndex = 11;
             // 
-            // Mainpage
+            // label2
             // 
-            this.Mainpage.AutoSize = true;
-            this.Mainpage.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Mainpage.ForeColor = System.Drawing.Color.White;
-            this.Mainpage.Location = new System.Drawing.Point(58, 25);
-            this.Mainpage.Name = "Mainpage";
-            this.Mainpage.Size = new System.Drawing.Size(114, 23);
-            this.Mainpage.TabIndex = 0;
-            this.Mainpage.Text = "Mainpage";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(67, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Arikel";
             // 
-            // pictureBox1
+            // dataGridView1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(399, 267);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(772, 400);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // testtext
+            // 
+            this.testtext.Location = new System.Drawing.Point(46, 31);
+            this.testtext.Multiline = true;
+            this.testtext.Name = "testtext";
+            this.testtext.Size = new System.Drawing.Size(670, 166);
+            this.testtext.TabIndex = 12;
             // 
             // MainWindow
             // 
@@ -400,7 +452,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1567, 790);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -412,6 +464,9 @@
             this.Text = "                                    ";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Dashboard_Panel.ResumeLayout(false);
             this.Dashboard_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBDashboard)).EndInit();
@@ -431,9 +486,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelContainer.ResumeLayout(false);
+            this.PanelContainer.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,8 +524,12 @@
         private Panel panel3;
         private Label Mainpage;
         private PictureBox pictureBox1;
-        private MonthCalendar monthCalendar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private Panel PanelContainer;
+        private DataGridView dataGridView1;
+        private Panel panel4;
+        private Label label2;
+        private TextBox testtext;
     }
 }

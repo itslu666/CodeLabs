@@ -12,6 +12,7 @@ namespace Project
 {
     public partial class MainWindow : Form
     {
+        List<Artikel> artikelList = new List<Artikel>();
         public MainWindow()
         {
             InitializeComponent();
@@ -26,11 +27,68 @@ namespace Project
 
         }
 
-        
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void CloseMain_Click(object sender, EventArgs e)
         { 
             Close();
         }
+
+        private void Dashboard_Panel_Paint(object sender, PaintEventArgs e)
+        {
+            ShowArtikelTable();
+        }
+
+        private void ShowArtikelTable()
+        {
+            if (dataGridView1.Columns.Count == 0)
+            {
+                dataGridView1.Columns.Add("id", "ID");
+                dataGridView1.Columns.Add("name", "Name");
+                dataGridView1.Columns.Add("description", "Beschreibung");
+                dataGridView1.Columns.Add("price", "Verkaufs Preis");
+                dataGridView1.Columns.Add("wg_id", "Warengruppe ID");
+            }
+
+            List<Artikel> artList = getArtikel();
+
+            foreach (Artikel art in artList)
+            {
+                dataGridView1.Rows.Add(art.Id.ToString(), art.Bezeichnung.ToString(), art.Description.ToString(), art.Price.ToString(), art.Wg_nr.ToString());
+            }
+        }
+
+
+        private List<Artikel> getArtikel()
+        {
+            DB_Connector connector = new DB_Connector();
+
+            List<string> data = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM Artikel");
+
+            foreach (string s in data)
+            {
+                Artikel artikel = new Artikel();
+
+                artikel.Id = Convert.ToInt32(s[0]);
+                artikel.Bezeichnung = Convert.ToString(s[1]);
+                artikel.Description = Convert.ToString(s[2]);
+                artikel.Price = Convert.ToString(s[3]);
+                artikel.Wg_nr = int.TryParse(Convert.ToString(s[4]), out int id) ? id : 0;
+
+                artikelList.Add(artikel);
+            }
+
+            return artikelList;
+        }
+
+
+
+
+
+
 
         // hover events for panels
         private void Dashboard_MouseHover(object sender, EventArgs e)
@@ -115,6 +173,11 @@ namespace Project
                     SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

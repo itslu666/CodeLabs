@@ -14,6 +14,10 @@ namespace Project
         private string price;
         private int wg_nr;
 
+        public Artikel()
+        {
+        }
+
         public Artikel (int id, string bezeichnung, string description, string price, int wg_nr)
         {
             this.id = id;
