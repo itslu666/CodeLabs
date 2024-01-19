@@ -9,9 +9,9 @@ namespace Project
 {
     public class DB_Connector
     {
-        public List<string> GetData(string conString, string query)
+        public List<List<string?>> GetData(string conString, string query)
         {
-            List<string> resultData = new List<string>();
+            var resultData = new List<List<string?>>();
 
             using (MySqlConnection conn = new MySqlConnection(conString))
             {
@@ -28,14 +28,14 @@ namespace Project
 
                         while (reader.Read())
                         {
-                            StringBuilder rowStringBuilder = new StringBuilder();
+                            var row = new List<string?>();
 
                             for (int i = 0; i < columnCount; i++)
                             {
-                                rowStringBuilder.Append(reader[i].ToString() + " ");
+                                row.Add(reader[i].ToString());
                             }
 
-                            resultData.Add(rowStringBuilder.ToString());
+                            resultData.Add(row);
                         }
                     }
                 }

@@ -76,15 +76,14 @@ namespace Project
         private void LoginButton_Click(object sender, EventArgs e)
         {
             // get data from database
-            List<string> loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT M_Nr, passwort FROM mitarbeiter");
+            var loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT M_Nr, passwort FROM mitarbeiter");
 
-            foreach (string employee in loginData)
+            foreach (var credentials in loginData)
             {
                 // show employees for debug
                 // MessageBox.Show(employee);
 
                 // split username and password
-                string[] credentials = employee.Split(" ");
 
                 // check if username and pw
                 if (tbusername.Text == credentials[0] && tbpassword.Text == credentials[1])

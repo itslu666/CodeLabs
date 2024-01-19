@@ -37,13 +37,16 @@ namespace Project
             Close();
         }
 
-        private void Dashboard_Panel_Paint(object sender, PaintEventArgs e)
+        
+        private void Dashboard_Panel_MouseDown(object sender, MouseEventArgs e)
         {
             ShowArtikelTable();
         }
 
         private void ShowArtikelTable()
         {
+            dataGridView1.Columns.Clear();
+
             if (dataGridView1.Columns.Count == 0)
             {
                 dataGridView1.Columns.Add("id", "ID");
@@ -55,34 +58,44 @@ namespace Project
 
             List<Artikel> artList = getArtikel();
 
+            // Clear vor dem Hinzufügen neuer Daten
+            dataGridView1.Rows.Clear();
+
             foreach (Artikel art in artList)
             {
                 dataGridView1.Rows.Add(art.Id.ToString(), art.Bezeichnung.ToString(), art.Description.ToString(), art.Price.ToString(), art.Wg_nr.ToString());
             }
         }
 
-
         private List<Artikel> getArtikel()
         {
             DB_Connector connector = new DB_Connector();
+            StringBuilder rowStringBuilder = new StringBuilder();
+            var data = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM Artikel");
 
-            List<string> data = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM Artikel");
+            // Leere die Liste vor dem Hinzufügen neuer Daten
+            artikelList.Clear();
 
-            foreach (string s in data)
+            foreach (var values in data)
             {
+
                 Artikel artikel = new Artikel();
 
-                artikel.Id = Convert.ToInt32(s[0]);
-                artikel.Bezeichnung = Convert.ToString(s[1]);
-                artikel.Description = Convert.ToString(s[2]);
-                artikel.Price = Convert.ToString(s[3]);
-                artikel.Wg_nr = int.TryParse(Convert.ToString(s[4]), out int id) ? id : 0;
+                artikel.Id = Convert.ToInt32(values[0]);
+                artikel.Bezeichnung = values[1];
+                artikel.Description = values[2];
+                artikel.Price = values[3];
+
+                artikel.Wg_nr = int.TryParse(values[4], out int id) ? id : 0;
 
                 artikelList.Add(artikel);
             }
 
             return artikelList;
         }
+
+
+
 
 
 

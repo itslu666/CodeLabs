@@ -212,6 +212,7 @@
             // 
             this.tbpassword.Location = new System.Drawing.Point(39, 220);
             this.tbpassword.Name = "tbpassword";
+            this.tbpassword.PasswordChar = '*';
             this.tbpassword.Size = new System.Drawing.Size(256, 23);
             this.tbpassword.TabIndex = 5;
             this.tbpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbpassword_KeyDown_1);

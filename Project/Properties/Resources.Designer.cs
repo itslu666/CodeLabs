@@ -59,5 +59,76 @@ namespace Project.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b61a6cf83ad7755c1e377888b1d75943 {
+            get {
+                object obj = ResourceManager.GetObject("b61a6cf83ad7755c1e377888b1d75943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b61a6cf83ad7755c1e377888b1d759431 {
+            get {
+                object obj = ResourceManager.GetObject("b61a6cf83ad7755c1e377888b1d759431", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_3_c6ed8022f3 {
+            get {
+                object obj = ResourceManager.GetObject("ezgif-3-c6ed8022f3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap goofy_couples__silly_cats_Catt_Care__cat_silly_cats_silly_cats_pfp_silly_cats_matching_pf_kitten_lit {
+            get {
+                object obj = ResourceManager.GetObject("goofy couples _silly cats Catt Care  cat silly cats silly cats pfp silly cats mat" +
+                        "ching pf kitten lit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap polish_cow_dancing_cow {
+            get {
+                object obj = ResourceManager.GetObject("polish-cow-dancing-cow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Searchwhite {
+            get {
+                object obj = ResourceManager.GetObject("Searchwhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

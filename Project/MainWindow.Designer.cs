@@ -58,10 +58,16 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.PanelContainer = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Kunden_Panel = new System.Windows.Forms.Panel();
+            this.Kunden_Label = new System.Windows.Forms.Label();
+            this.Lieferant_Panel = new System.Windows.Forms.Panel();
+            this.Lieferant_Label = new System.Windows.Forms.Label();
+            this.Artikel_Panel = new System.Windows.Forms.Panel();
+            this.Artikel_Label = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.testtext = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,8 +85,12 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
             this.PanelContainer.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Kunden_Panel.SuspendLayout();
+            this.Lieferant_Panel.SuspendLayout();
+            this.Artikel_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -141,7 +151,7 @@
             this.Dashboard_Panel.Name = "Dashboard_Panel";
             this.Dashboard_Panel.Size = new System.Drawing.Size(218, 75);
             this.Dashboard_Panel.TabIndex = 6;
-            this.Dashboard_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Dashboard_Panel_Paint);
+            this.Dashboard_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_Panel_MouseDown);
             this.Dashboard_Panel.MouseEnter += new System.EventHandler(this.Dashboard_MouseHover);
             this.Dashboard_Panel.MouseLeave += new System.EventHandler(this.Dashboard_Panel_MouseLeave);
             // 
@@ -152,9 +162,9 @@
             this.Dashboard.ForeColor = System.Drawing.Color.White;
             this.Dashboard.Location = new System.Drawing.Point(58, 25);
             this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(125, 23);
+            this.Dashboard.Size = new System.Drawing.Size(103, 23);
             this.Dashboard.TabIndex = 0;
-            this.Dashboard.Text = "Dashboard";
+            this.Dashboard.Text = "Tabellen";
             this.Dashboard.MouseEnter += new System.EventHandler(this.Dashboard_MouseHover);
             this.Dashboard.MouseLeave += new System.EventHandler(this.Dashboard_Panel_MouseLeave);
             // 
@@ -283,11 +293,11 @@
             this.settings.AutoSize = true;
             this.settings.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.settings.ForeColor = System.Drawing.Color.White;
-            this.settings.Location = new System.Drawing.Point(61, 25);
+            this.settings.Location = new System.Drawing.Point(53, 24);
             this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(100, 23);
+            this.settings.Size = new System.Drawing.Size(159, 23);
             this.settings.TabIndex = 0;
-            this.settings.Text = "Settings";
+            this.settings.Text = "Einstellungen";
             this.settings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
             this.settings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
             // 
@@ -398,52 +408,127 @@
             // 
             // PanelContainer
             // 
-            this.PanelContainer.Controls.Add(this.testtext);
-            this.PanelContainer.Controls.Add(this.panel4);
+            this.PanelContainer.BackColor = System.Drawing.Color.Transparent;
+            this.PanelContainer.Controls.Add(this.textBox1);
+            this.PanelContainer.Controls.Add(this.pictureBox2);
+            this.PanelContainer.Controls.Add(this.Kunden_Panel);
+            this.PanelContainer.Controls.Add(this.Lieferant_Panel);
+            this.PanelContainer.Controls.Add(this.Artikel_Panel);
             this.PanelContainer.Controls.Add(this.dataGridView1);
+            this.PanelContainer.Controls.Add(this.pictureBox3);
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContainer.Location = new System.Drawing.Point(218, 44);
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(1349, 746);
             this.PanelContainer.TabIndex = 6;
             // 
-            // panel4
+            // textBox1
             // 
-            this.panel4.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(83, 323);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(218, 75);
-            this.panel4.TabIndex = 11;
+            this.textBox1.Location = new System.Drawing.Point(316, 234);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Suchen...";
+            this.textBox1.Size = new System.Drawing.Size(827, 27);
+            this.textBox1.TabIndex = 14;
             // 
-            // label2
+            // pictureBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(67, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Arikel";
+            this.pictureBox2.BackColor = System.Drawing.Color.MediumPurple;
+            this.pictureBox2.Image = global::Project.Properties.Resources.Search;
+            this.pictureBox2.Location = new System.Drawing.Point(1149, 234);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Kunden_Panel
+            // 
+            this.Kunden_Panel.BackColor = System.Drawing.Color.BlueViolet;
+            this.Kunden_Panel.Controls.Add(this.Kunden_Label);
+            this.Kunden_Panel.Location = new System.Drawing.Point(83, 553);
+            this.Kunden_Panel.Name = "Kunden_Panel";
+            this.Kunden_Panel.Size = new System.Drawing.Size(218, 75);
+            this.Kunden_Panel.TabIndex = 13;
+            // 
+            // Kunden_Label
+            // 
+            this.Kunden_Label.AutoSize = true;
+            this.Kunden_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Kunden_Label.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Kunden_Label.ForeColor = System.Drawing.Color.White;
+            this.Kunden_Label.Location = new System.Drawing.Point(67, 25);
+            this.Kunden_Label.Name = "Kunden_Label";
+            this.Kunden_Label.Size = new System.Drawing.Size(93, 23);
+            this.Kunden_Label.TabIndex = 0;
+            this.Kunden_Label.Text = "Kunden";
+            this.Kunden_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Lieferant_Panel
+            // 
+            this.Lieferant_Panel.BackColor = System.Drawing.Color.BlueViolet;
+            this.Lieferant_Panel.Controls.Add(this.Lieferant_Label);
+            this.Lieferant_Panel.Location = new System.Drawing.Point(83, 423);
+            this.Lieferant_Panel.Name = "Lieferant_Panel";
+            this.Lieferant_Panel.Size = new System.Drawing.Size(218, 75);
+            this.Lieferant_Panel.TabIndex = 12;
+            // 
+            // Lieferant_Label
+            // 
+            this.Lieferant_Label.AutoSize = true;
+            this.Lieferant_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Lieferant_Label.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Lieferant_Label.ForeColor = System.Drawing.Color.White;
+            this.Lieferant_Label.Location = new System.Drawing.Point(57, 28);
+            this.Lieferant_Label.Name = "Lieferant_Label";
+            this.Lieferant_Label.Size = new System.Drawing.Size(108, 23);
+            this.Lieferant_Label.TabIndex = 0;
+            this.Lieferant_Label.Text = "Lieferant";
+            // 
+            // Artikel_Panel
+            // 
+            this.Artikel_Panel.BackColor = System.Drawing.Color.BlueViolet;
+            this.Artikel_Panel.Controls.Add(this.Artikel_Label);
+            this.Artikel_Panel.Location = new System.Drawing.Point(83, 294);
+            this.Artikel_Panel.Name = "Artikel_Panel";
+            this.Artikel_Panel.Size = new System.Drawing.Size(218, 79);
+            this.Artikel_Panel.TabIndex = 11;
+            // 
+            // Artikel_Label
+            // 
+            this.Artikel_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Artikel_Label.AutoSize = true;
+            this.Artikel_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Artikel_Label.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Artikel_Label.ForeColor = System.Drawing.Color.White;
+            this.Artikel_Label.Location = new System.Drawing.Point(67, 26);
+            this.Artikel_Label.Name = "Artikel_Label";
+            this.Artikel_Label.Size = new System.Drawing.Size(83, 23);
+            this.Artikel_Label.TabIndex = 0;
+            this.Artikel_Label.Text = "Artikel";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(399, 267);
+            this.dataGridView1.Location = new System.Drawing.Point(316, 267);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(864, 400);
             this.dataGridView1.TabIndex = 0;
             // 
-            // testtext
+            // pictureBox3
             // 
-            this.testtext.Location = new System.Drawing.Point(46, 31);
-            this.testtext.Multiline = true;
-            this.testtext.Name = "testtext";
-            this.testtext.Size = new System.Drawing.Size(670, 166);
-            this.testtext.TabIndex = 12;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::Project.Properties.Resources.b61a6cf83ad7755c1e377888b1d759431;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1349, 746);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
             // 
             // MainWindow
             // 
@@ -488,9 +573,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
             this.PanelContainer.ResumeLayout(false);
             this.PanelContainer.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Kunden_Panel.ResumeLayout(false);
+            this.Kunden_Panel.PerformLayout();
+            this.Lieferant_Panel.ResumeLayout(false);
+            this.Lieferant_Panel.PerformLayout();
+            this.Artikel_Panel.ResumeLayout(false);
+            this.Artikel_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,8 +619,14 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private Panel PanelContainer;
         private DataGridView dataGridView1;
-        private Panel panel4;
-        private Label label2;
-        private TextBox testtext;
+        private Panel Artikel_Panel;
+        private Label Artikel_Label;
+        private Panel Kunden_Panel;
+        private Label Kunden_Label;
+        private Panel Lieferant_Panel;
+        private Label Lieferant_Label;
+        private TextBox textBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
