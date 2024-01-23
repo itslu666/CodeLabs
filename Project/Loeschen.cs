@@ -20,6 +20,8 @@ namespace Project
 
         private void CloseLoeschen_Click(object sender, EventArgs e)
         {
+            MainWindow mw = new MainWindow();
+            mw.isOpen = false;
             Close();
         }
 

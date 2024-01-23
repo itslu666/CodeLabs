@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Mainpage = new System.Windows.Forms.Label();
@@ -58,20 +57,6 @@
             this.Spieletraum_Mainwindow = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.PanelContainer = new System.Windows.Forms.Panel();
-            this.Export_Button = new System.Windows.Forms.Button();
-            this.Bearbeiten_Button = new System.Windows.Forms.Button();
-            this.Loeschen_Button = new System.Windows.Forms.Button();
-            this.Hinzufügen_Button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Kunden_Panel = new System.Windows.Forms.Panel();
-            this.Kunden_Label = new System.Windows.Forms.Label();
-            this.Lieferant_Panel = new System.Windows.Forms.Panel();
-            this.Lieferant_Label = new System.Windows.Forms.Label();
-            this.Artikel_Panel = new System.Windows.Forms.Panel();
-            this.Artikel_Label = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,12 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
-            this.PanelContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.Kunden_Panel.SuspendLayout();
-            this.Lieferant_Panel.SuspendLayout();
-            this.Artikel_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,7 +101,9 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 75);
             this.panel3.TabIndex = 10;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.panel3.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
+            this.panel3.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
             // 
             // Mainpage
             // 
@@ -134,6 +115,8 @@
             this.Mainpage.Size = new System.Drawing.Size(72, 23);
             this.Mainpage.TabIndex = 0;
             this.Mainpage.Text = "Home";
+            this.Mainpage.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
+            this.Mainpage.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -144,6 +127,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
             // 
             // Dashboard_Panel
             // 
@@ -410,206 +395,6 @@
             this.Spieletraum_Mainwindow.TabIndex = 1;
             this.Spieletraum_Mainwindow.Text = "SpieleTraum Management Program";
             // 
-            // PanelContainer
-            // 
-            this.PanelContainer.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PanelContainer.Controls.Add(this.Export_Button);
-            this.PanelContainer.Controls.Add(this.Bearbeiten_Button);
-            this.PanelContainer.Controls.Add(this.Loeschen_Button);
-            this.PanelContainer.Controls.Add(this.Hinzufügen_Button);
-            this.PanelContainer.Controls.Add(this.textBox1);
-            this.PanelContainer.Controls.Add(this.pictureBox2);
-            this.PanelContainer.Controls.Add(this.Kunden_Panel);
-            this.PanelContainer.Controls.Add(this.Lieferant_Panel);
-            this.PanelContainer.Controls.Add(this.Artikel_Panel);
-            this.PanelContainer.Controls.Add(this.dataGridView1);
-            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContainer.Location = new System.Drawing.Point(218, 44);
-            this.PanelContainer.Name = "PanelContainer";
-            this.PanelContainer.Size = new System.Drawing.Size(1349, 746);
-            this.PanelContainer.TabIndex = 6;
-            // 
-            // Export_Button
-            // 
-            this.Export_Button.BackColor = System.Drawing.Color.BlueViolet;
-            this.Export_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.Export_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Export_Button.ForeColor = System.Drawing.Color.White;
-            this.Export_Button.Location = new System.Drawing.Point(592, 592);
-            this.Export_Button.Name = "Export_Button";
-            this.Export_Button.Size = new System.Drawing.Size(337, 65);
-            this.Export_Button.TabIndex = 20;
-            this.Export_Button.Text = "Export Tabelle";
-            this.Export_Button.UseVisualStyleBackColor = false;
-            // 
-            // Bearbeiten_Button
-            // 
-            this.Bearbeiten_Button.BackColor = System.Drawing.Color.BlueViolet;
-            this.Bearbeiten_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
-            this.Bearbeiten_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Bearbeiten_Button.ForeColor = System.Drawing.Color.White;
-            this.Bearbeiten_Button.Location = new System.Drawing.Point(900, 35);
-            this.Bearbeiten_Button.Name = "Bearbeiten_Button";
-            this.Bearbeiten_Button.Size = new System.Drawing.Size(194, 65);
-            this.Bearbeiten_Button.TabIndex = 19;
-            this.Bearbeiten_Button.Text = "Bearbeiten";
-            this.Bearbeiten_Button.UseVisualStyleBackColor = false;
-            this.Bearbeiten_Button.Click += new System.EventHandler(this.Bearbeiten_Button_Click);
-            // 
-            // Loeschen_Button
-            // 
-            this.Loeschen_Button.BackColor = System.Drawing.Color.BlueViolet;
-            this.Loeschen_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
-            this.Loeschen_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Loeschen_Button.ForeColor = System.Drawing.Color.White;
-            this.Loeschen_Button.Location = new System.Drawing.Point(660, 35);
-            this.Loeschen_Button.Name = "Loeschen_Button";
-            this.Loeschen_Button.Size = new System.Drawing.Size(194, 65);
-            this.Loeschen_Button.TabIndex = 18;
-            this.Loeschen_Button.Text = "Löschen";
-            this.Loeschen_Button.UseVisualStyleBackColor = false;
-            this.Loeschen_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Loeschen_Button_MouseDown);
-            // 
-            // Hinzufügen_Button
-            // 
-            this.Hinzufügen_Button.BackColor = System.Drawing.Color.BlueViolet;
-            this.Hinzufügen_Button.FlatAppearance.BorderSize = 5;
-            this.Hinzufügen_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
-            this.Hinzufügen_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Hinzufügen_Button.ForeColor = System.Drawing.Color.White;
-            this.Hinzufügen_Button.Location = new System.Drawing.Point(402, 35);
-            this.Hinzufügen_Button.Name = "Hinzufügen_Button";
-            this.Hinzufügen_Button.Size = new System.Drawing.Size(194, 65);
-            this.Hinzufügen_Button.TabIndex = 17;
-            this.Hinzufügen_Button.Text = "Hinzufügen";
-            this.Hinzufügen_Button.UseVisualStyleBackColor = false;
-            this.Hinzufügen_Button.Click += new System.EventHandler(this.Hinzufügen_Button_Click);
-            this.Hinzufügen_Button.MouseEnter += new System.EventHandler(this.Hinzufügen_Button_MouseEnter);
-            this.Hinzufügen_Button.MouseLeave += new System.EventHandler(this.Hinzufügen_Button_MouseLeave);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(249, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Suchen...";
-            this.textBox1.Size = new System.Drawing.Size(1051, 27);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.MediumPurple;
-            this.pictureBox2.Image = global::Project.Properties.Resources.Search;
-            this.pictureBox2.Location = new System.Drawing.Point(1306, 129);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // Kunden_Panel
-            // 
-            this.Kunden_Panel.BackColor = System.Drawing.Color.BlueViolet;
-            this.Kunden_Panel.Controls.Add(this.Kunden_Label);
-            this.Kunden_Panel.Location = new System.Drawing.Point(16, 448);
-            this.Kunden_Panel.Name = "Kunden_Panel";
-            this.Kunden_Panel.Size = new System.Drawing.Size(218, 75);
-            this.Kunden_Panel.TabIndex = 13;
-            this.Kunden_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kunden_Panel_MouseDown);
-            this.Kunden_Panel.MouseEnter += new System.EventHandler(this.Kunden_Panel_MouseEnter);
-            this.Kunden_Panel.MouseLeave += new System.EventHandler(this.Kunden_Panel_MouseLeave);
-            // 
-            // Kunden_Label
-            // 
-            this.Kunden_Label.AutoSize = true;
-            this.Kunden_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Kunden_Label.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Kunden_Label.ForeColor = System.Drawing.Color.White;
-            this.Kunden_Label.Location = new System.Drawing.Point(66, 25);
-            this.Kunden_Label.Name = "Kunden_Label";
-            this.Kunden_Label.Size = new System.Drawing.Size(93, 23);
-            this.Kunden_Label.TabIndex = 0;
-            this.Kunden_Label.Text = "Kunden";
-            this.Kunden_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Kunden_Label.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kunden_Label_MouseDown);
-            // 
-            // Lieferant_Panel
-            // 
-            this.Lieferant_Panel.BackColor = System.Drawing.Color.BlueViolet;
-            this.Lieferant_Panel.Controls.Add(this.Lieferant_Label);
-            this.Lieferant_Panel.Location = new System.Drawing.Point(16, 318);
-            this.Lieferant_Panel.Name = "Lieferant_Panel";
-            this.Lieferant_Panel.Size = new System.Drawing.Size(218, 75);
-            this.Lieferant_Panel.TabIndex = 12;
-            this.Lieferant_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Lieferant_Panel_MouseDown);
-            this.Lieferant_Panel.MouseEnter += new System.EventHandler(this.Lieferant_Panel_MouseEnter);
-            this.Lieferant_Panel.MouseLeave += new System.EventHandler(this.Lieferant_Panel_MouseLeave);
-            // 
-            // Lieferant_Label
-            // 
-            this.Lieferant_Label.AutoSize = true;
-            this.Lieferant_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Lieferant_Label.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lieferant_Label.ForeColor = System.Drawing.Color.White;
-            this.Lieferant_Label.Location = new System.Drawing.Point(57, 28);
-            this.Lieferant_Label.Name = "Lieferant_Label";
-            this.Lieferant_Label.Size = new System.Drawing.Size(108, 23);
-            this.Lieferant_Label.TabIndex = 0;
-            this.Lieferant_Label.Text = "Lieferant";
-            this.Lieferant_Label.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Lieferant_Label_MouseDown);
-            // 
-            // Artikel_Panel
-            // 
-            this.Artikel_Panel.BackColor = System.Drawing.Color.BlueViolet;
-            this.Artikel_Panel.Controls.Add(this.Artikel_Label);
-            this.Artikel_Panel.Location = new System.Drawing.Point(16, 189);
-            this.Artikel_Panel.Name = "Artikel_Panel";
-            this.Artikel_Panel.Size = new System.Drawing.Size(218, 79);
-            this.Artikel_Panel.TabIndex = 11;
-            this.Artikel_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Artikel_Panel_MouseDown);
-            this.Artikel_Panel.MouseEnter += new System.EventHandler(this.Artikel_Panel_MouseHover);
-            this.Artikel_Panel.MouseLeave += new System.EventHandler(this.Artikel_Panel_MouseLeave);
-            // 
-            // Artikel_Label
-            // 
-            this.Artikel_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Artikel_Label.AutoSize = true;
-            this.Artikel_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Artikel_Label.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Artikel_Label.ForeColor = System.Drawing.Color.White;
-            this.Artikel_Label.Location = new System.Drawing.Point(67, 26);
-            this.Artikel_Label.Name = "Artikel_Label";
-            this.Artikel_Label.Size = new System.Drawing.Size(83, 23);
-            this.Artikel_Label.TabIndex = 0;
-            this.Artikel_Label.Text = "Artikel";
-            this.Artikel_Label.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Artikel_Label_MouseDown);
-            this.Artikel_Label.MouseEnter += new System.EventHandler(this.Artikel_Panel_MouseHover);
-            this.Artikel_Label.MouseLeave += new System.EventHandler(this.Artikel_Panel_MouseLeave);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(249, 162);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1088, 400);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -617,7 +402,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1567, 790);
-            this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -652,16 +436,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
-            this.PanelContainer.ResumeLayout(false);
-            this.PanelContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.Kunden_Panel.ResumeLayout(false);
-            this.Kunden_Panel.PerformLayout();
-            this.Lieferant_Panel.ResumeLayout(false);
-            this.Lieferant_Panel.PerformLayout();
-            this.Artikel_Panel.ResumeLayout(false);
-            this.Artikel_Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,19 +471,5 @@
         private PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private Panel PanelContainer;
-        private DataGridView dataGridView1;
-        private Panel Artikel_Panel;
-        private Label Artikel_Label;
-        private Panel Kunden_Panel;
-        private Label Kunden_Label;
-        private Panel Lieferant_Panel;
-        private Label Lieferant_Label;
-        private TextBox textBox1;
-        private PictureBox pictureBox2;
-        private Button Export_Button;
-        private Button Bearbeiten_Button;
-        private Button Loeschen_Button;
-        private Button Hinzufügen_Button;
     }
 }
