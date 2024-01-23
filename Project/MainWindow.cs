@@ -75,7 +75,7 @@ namespace Project
 
         private void Logout_Panel_MouseLeave(object sender, EventArgs e)
         {
-            Logout_Panel.BackColor = Color.MediumPurple;
+            Logout_Panel.BackColor = Color.Transparent;
         }
         private void panel3_MouseEnter(object sender, EventArgs e)
         {

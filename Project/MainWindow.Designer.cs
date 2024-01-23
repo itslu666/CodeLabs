@@ -59,6 +59,9 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.UserProfilbild = new System.Windows.Forms.PictureBox();
+            this.PBUser = new System.Windows.Forms.PictureBox();
+            this.Username_LAbel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).BeginInit();
@@ -75,12 +78,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel1.BackgroundImage = global::Project.Properties.Resources.glatte_elegante_farbverlauf_lila_hintergrund_1258_1372_ezgif_com_avif_to_png_converter;
+            this.panel1.BackgroundImage = global::Project.Properties.Resources.b61a6cf83ad7755c1e377888b1d75943;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.Settings_Panel);
             this.panel1.Controls.Add(this.panel3);
@@ -300,8 +305,7 @@
             // 
             // Logout_Panel
             // 
-            this.Logout_Panel.BackColor = System.Drawing.Color.MediumPurple;
-            this.Logout_Panel.BackgroundImage = global::Project.Properties.Resources.b61a6cf83ad7755c1e377888b1d75943;
+            this.Logout_Panel.BackColor = System.Drawing.Color.Transparent;
             this.Logout_Panel.Controls.Add(this.PBLogout);
             this.Logout_Panel.Controls.Add(this.Logout);
             this.Logout_Panel.Location = new System.Drawing.Point(0, 724);
@@ -375,9 +379,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel2.BackgroundImage = global::Project.Properties.Resources.glatte_elegante_farbverlauf_lila_hintergrund_1258_1372_ezgif1;
+            this.panel2.BackgroundImage = global::Project.Properties.Resources.b61a6cf83ad7755c1e377888b1d75943_ezgif_com_rotate;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.Username_LAbel);
+            this.panel2.Controls.Add(this.UserProfilbild);
             this.panel2.Controls.Add(this.PanelContainer);
+            this.panel2.Controls.Add(this.PBUser);
             this.panel2.Controls.Add(this.PBLogo2);
             this.panel2.Controls.Add(this.Spieletraum_Mainwindow);
             this.panel2.Controls.Add(this.CloseMain);
@@ -425,6 +432,38 @@
             this.panel4.Size = new System.Drawing.Size(1349, 746);
             this.panel4.TabIndex = 6;
             // 
+            // UserProfilbild
+            // 
+            this.UserProfilbild.BackColor = System.Drawing.Color.Transparent;
+            this.UserProfilbild.Image = global::Project.Properties.Resources.User;
+            this.UserProfilbild.Location = new System.Drawing.Point(1256, 9);
+            this.UserProfilbild.Name = "UserProfilbild";
+            this.UserProfilbild.Size = new System.Drawing.Size(28, 28);
+            this.UserProfilbild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UserProfilbild.TabIndex = 8;
+            this.UserProfilbild.TabStop = false;
+            // 
+            // PBUser
+            // 
+            this.PBUser.BackColor = System.Drawing.Color.Transparent;
+            this.PBUser.Image = global::Project.Properties.Resources.Circle;
+            this.PBUser.Location = new System.Drawing.Point(1245, 3);
+            this.PBUser.Name = "PBUser";
+            this.PBUser.Size = new System.Drawing.Size(49, 41);
+            this.PBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBUser.TabIndex = 7;
+            this.PBUser.TabStop = false;
+            // 
+            // Username_LAbel
+            // 
+            this.Username_LAbel.AutoSize = true;
+            this.Username_LAbel.BackColor = System.Drawing.Color.Transparent;
+            this.Username_LAbel.Location = new System.Drawing.Point(1160, 14);
+            this.Username_LAbel.Name = "Username_LAbel";
+            this.Username_LAbel.Size = new System.Drawing.Size(79, 18);
+            this.Username_LAbel.TabIndex = 9;
+            this.Username_LAbel.Text = "UserTest";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -466,6 +505,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,5 +544,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private Panel PanelContainer;
         private Panel panel4;
+        private Label Username_LAbel;
+        private PictureBox UserProfilbild;
+        private PictureBox PBUser;
     }
 }
