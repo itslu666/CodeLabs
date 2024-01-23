@@ -12,6 +12,10 @@ namespace Project
 {
     public partial class UC_Tabelle : UserControl
     {
+        List<Artikel> artikelList = new List<Artikel>();
+        List<Kunde> kundenList = new List<Kunde>();
+        List<Lieferant> lieferantList = new List<Lieferant>();
+
         public UC_Tabelle()
         {
             InitializeComponent();
@@ -304,6 +308,11 @@ namespace Project
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.BlueViolet;
+        }
+
+        private void Lieferant_Label_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

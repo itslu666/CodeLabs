@@ -118,25 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="goofy couples _silly cats Catt Care  cat silly cats silly cats pfp silly cats matching pf kitten lit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\goofy couples _silly cats Catt Care  cat silly cats silly cats pfp silly cats matching pf kitten lit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="polish-cow-dancing-cow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\polish-cow-dancing-cow.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b61a6cf83ad7755c1e377888b1d75943" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b61a6cf83ad7755c1e377888b1d75943.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="b61a6cf83ad7755c1e377888b1d759431" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b61a6cf83ad7755c1e377888b1d759431.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Searchwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Searchwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="b61a6cf83ad7755c1e377888b1d75943" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b61a6cf83ad7755c1e377888b1d75943.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="polish-cow-dancing-cow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\polish-cow-dancing-cow.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Open Pane1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open Pane1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Closeweiß" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Closeweiß.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Import File" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Import File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goofy couples _silly cats Catt Care  cat silly cats silly cats pfp silly cats matching pf kitten lit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goofy couples _silly cats Catt Care  cat silly cats silly cats pfp silly cats matching pf kitten lit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2024-01-16 092552" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2024-01-16 092552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ezgif-3-c6ed8022f3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ezgif-3-c6ed8022f3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="b61a6cf83ad7755c1e377888b1d759431" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b61a6cf83ad7755c1e377888b1d759431.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close.weißsmallpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close.weißsmallpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spreadsheet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spreadsheet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Open Pane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open Pane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kKNNn9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kKNNn9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

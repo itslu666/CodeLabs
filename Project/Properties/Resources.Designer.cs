@@ -83,6 +83,36 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bot {
+            get {
+                object obj = ResourceManager.GetObject("Bot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_weißsmallpng {
+            get {
+                object obj = ResourceManager.GetObject("Close.weißsmallpng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Closeweiß {
+            get {
+                object obj = ResourceManager.GetObject("Closeweiß", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ezgif_3_c6ed8022f3 {
             get {
                 object obj = ResourceManager.GetObject("ezgif-3-c6ed8022f3", resourceCulture);
@@ -104,9 +134,59 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Import_File {
+            get {
+                object obj = ResourceManager.GetObject("Import File", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kKNNn9 {
+            get {
+                object obj = ResourceManager.GetObject("kKNNn9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_Pane {
+            get {
+                object obj = ResourceManager.GetObject("Open Pane", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_Pane1 {
+            get {
+                object obj = ResourceManager.GetObject("Open Pane1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap polish_cow_dancing_cow {
             get {
                 object obj = ResourceManager.GetObject("polish-cow-dancing-cow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_01_16_092552 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-01-16 092552", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -127,6 +207,26 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap Searchwhite {
             get {
                 object obj = ResourceManager.GetObject("Searchwhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings {
+            get {
+                object obj = ResourceManager.GetObject("Settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spreadsheet {
+            get {
+                object obj = ResourceManager.GetObject("Spreadsheet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

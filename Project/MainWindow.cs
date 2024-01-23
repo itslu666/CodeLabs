@@ -12,11 +12,6 @@ namespace Project
 {
     public partial class MainWindow : Form
     {
-        List<Artikel> artikelList = new List<Artikel>();
-        List<Kunde> kundenList = new List<Kunde>();
-        List<Lieferant> lieferantList = new List<Lieferant>();
-        public bool isOpen;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -144,14 +139,20 @@ namespace Project
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            PanelContainer.Controls.Clear();
-            PanelContainer.Controls.Add(userControl);
+            panel4.Controls.Clear();
+            panel4.Controls.Add(userControl);
             userControl.BringToFront();
         }
         private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             UC_Home uc_Home = new UC_Home();
             addUserControl(uc_Home);
+        }
+
+        private void Dashboard_Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            UC_Tabelle uc_Tabelle = new UC_Tabelle();
+            addUserControl(uc_Tabelle);
         }
     }
 }

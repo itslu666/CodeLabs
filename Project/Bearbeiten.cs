@@ -19,8 +19,6 @@ namespace Project
 
         private void CloseBearbeiten_Click(object sender, EventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.isOpen = false;
             Close();
         }
 

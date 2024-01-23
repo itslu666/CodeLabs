@@ -53,10 +53,12 @@
             this.CloseMain = new System.Windows.Forms.Button();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Mainwindow = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,6 +117,7 @@
             this.Mainpage.Size = new System.Drawing.Size(72, 23);
             this.Mainpage.TabIndex = 0;
             this.Mainpage.Text = "Home";
+            this.Mainpage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.Mainpage.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
             this.Mainpage.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
             // 
@@ -127,6 +130,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
             // 
@@ -153,19 +157,20 @@
             this.Dashboard.Size = new System.Drawing.Size(103, 23);
             this.Dashboard.TabIndex = 0;
             this.Dashboard.Text = "Tabellen";
-            this.Dashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
+            this.Dashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_Panel_MouseDown);
             this.Dashboard.MouseEnter += new System.EventHandler(this.Dashboard_MouseHover);
             this.Dashboard.MouseLeave += new System.EventHandler(this.Dashboard_Panel_MouseLeave);
             // 
             // PBDashboard
             // 
-            this.PBDashboard.Image = ((System.Drawing.Image)(resources.GetObject("PBDashboard.Image")));
+            this.PBDashboard.Image = global::Project.Properties.Resources.Spreadsheet;
             this.PBDashboard.Location = new System.Drawing.Point(3, 14);
             this.PBDashboard.Name = "PBDashboard";
             this.PBDashboard.Size = new System.Drawing.Size(49, 47);
             this.PBDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBDashboard.TabIndex = 1;
             this.PBDashboard.TabStop = false;
+            this.PBDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_Panel_MouseDown);
             this.PBDashboard.MouseEnter += new System.EventHandler(this.Dashboard_MouseHover);
             this.PBDashboard.MouseLeave += new System.EventHandler(this.Dashboard_Panel_MouseLeave);
             // 
@@ -183,7 +188,7 @@
             // 
             // PBImport
             // 
-            this.PBImport.Image = ((System.Drawing.Image)(resources.GetObject("PBImport.Image")));
+            this.PBImport.Image = global::Project.Properties.Resources.Import_File;
             this.PBImport.Location = new System.Drawing.Point(3, 14);
             this.PBImport.Name = "PBImport";
             this.PBImport.Size = new System.Drawing.Size(49, 47);
@@ -220,7 +225,7 @@
             // 
             // PBChatBot
             // 
-            this.PBChatBot.Image = ((System.Drawing.Image)(resources.GetObject("PBChatBot.Image")));
+            this.PBChatBot.Image = global::Project.Properties.Resources.Bot;
             this.PBChatBot.Location = new System.Drawing.Point(3, 14);
             this.PBChatBot.Name = "PBChatBot";
             this.PBChatBot.Size = new System.Drawing.Size(49, 47);
@@ -245,7 +250,7 @@
             // 
             // PBLogo
             // 
-            this.PBLogo.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo.Image")));
+            this.PBLogo.Image = global::Project.Properties.Resources.Screenshot_2024_01_16_092552;
             this.PBLogo.Location = new System.Drawing.Point(51, 48);
             this.PBLogo.Name = "PBLogo";
             this.PBLogo.Size = new System.Drawing.Size(100, 96);
@@ -267,7 +272,7 @@
             // 
             // PBSettings
             // 
-            this.PBSettings.Image = ((System.Drawing.Image)(resources.GetObject("PBSettings.Image")));
+            this.PBSettings.Image = global::Project.Properties.Resources.Settings;
             this.PBSettings.Location = new System.Drawing.Point(3, 15);
             this.PBSettings.Name = "PBSettings";
             this.PBSettings.Size = new System.Drawing.Size(49, 47);
@@ -304,7 +309,7 @@
             // 
             // PBLogout
             // 
-            this.PBLogout.Image = ((System.Drawing.Image)(resources.GetObject("PBLogout.Image")));
+            this.PBLogout.Image = global::Project.Properties.Resources.Open_Pane1;
             this.PBLogout.Location = new System.Drawing.Point(12, 16);
             this.PBLogout.Name = "PBLogout";
             this.PBLogout.Size = new System.Drawing.Size(40, 47);
@@ -341,12 +346,12 @@
             // CloseMain
             // 
             this.CloseMain.BackColor = System.Drawing.Color.BlueViolet;
-            this.CloseMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CloseMain.BackgroundImage")));
             this.CloseMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CloseMain.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.CloseMain.FlatAppearance.BorderSize = 0;
             this.CloseMain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CloseMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseMain.Image = global::Project.Properties.Resources.Close_weißsmallpng;
             this.CloseMain.Location = new System.Drawing.Point(1300, 0);
             this.CloseMain.Name = "CloseMain";
             this.CloseMain.Size = new System.Drawing.Size(49, 44);
@@ -364,6 +369,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel2.Controls.Add(this.PanelContainer);
             this.panel2.Controls.Add(this.PBLogo2);
             this.panel2.Controls.Add(this.Spieletraum_Mainwindow);
             this.panel2.Controls.Add(this.CloseMain);
@@ -374,9 +380,16 @@
             this.panel2.TabIndex = 5;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // PanelContainer
+            // 
+            this.PanelContainer.Location = new System.Drawing.Point(0, 43);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1349, 747);
+            this.PanelContainer.TabIndex = 6;
+            // 
             // PBLogo2
             // 
-            this.PBLogo2.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo2.Image")));
+            this.PBLogo2.Image = global::Project.Properties.Resources.Screenshot_2024_01_16_092552;
             this.PBLogo2.Location = new System.Drawing.Point(15, 4);
             this.PBLogo2.Name = "PBLogo2";
             this.PBLogo2.Size = new System.Drawing.Size(37, 33);
@@ -395,6 +408,14 @@
             this.Spieletraum_Mainwindow.TabIndex = 1;
             this.Spieletraum_Mainwindow.Text = "SpieleTraum Management Program";
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(218, 44);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1349, 746);
+            this.panel4.TabIndex = 6;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -402,12 +423,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1567, 790);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -471,5 +492,7 @@
         private PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private Panel PanelContainer;
+        private Panel panel4;
     }
 }
