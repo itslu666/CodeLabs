@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Settings_Panel = new System.Windows.Forms.Panel();
+            this.PBSettings = new System.Windows.Forms.PictureBox();
+            this.settings = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Mainpage = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,9 +46,6 @@
             this.PBChatBot = new System.Windows.Forms.PictureBox();
             this.ChatBot = new System.Windows.Forms.Label();
             this.PBLogo = new System.Windows.Forms.PictureBox();
-            this.Settings_Panel = new System.Windows.Forms.Panel();
-            this.PBSettings = new System.Windows.Forms.PictureBox();
-            this.settings = new System.Windows.Forms.Label();
             this.Logout_Panel = new System.Windows.Forms.Panel();
             this.PBLogout = new System.Windows.Forms.PictureBox();
             this.Logout = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.Settings_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Dashboard_Panel.SuspendLayout();
@@ -69,8 +71,6 @@
             this.ChatBot_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBChatBot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
-            this.Settings_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).BeginInit();
             this.Logout_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).BeginInit();
             this.panel2.SuspendLayout();
@@ -80,12 +80,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel1.BackgroundImage = global::Project.Properties.Resources.glatte_elegante_farbverlauf_lila_hintergrund_1258_1372_ezgif_com_avif_to_png_converter;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.Settings_Panel);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.Dashboard_Panel);
             this.panel1.Controls.Add(this.Import_Panel);
             this.panel1.Controls.Add(this.ChatBot_Panel);
             this.panel1.Controls.Add(this.PBLogo);
-            this.panel1.Controls.Add(this.Settings_Panel);
             this.panel1.Controls.Add(this.Logout_Panel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -93,6 +95,43 @@
             this.panel1.Size = new System.Drawing.Size(218, 790);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // Settings_Panel
+            // 
+            this.Settings_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Settings_Panel.Controls.Add(this.PBSettings);
+            this.Settings_Panel.Controls.Add(this.settings);
+            this.Settings_Panel.Location = new System.Drawing.Point(0, 504);
+            this.Settings_Panel.Name = "Settings_Panel";
+            this.Settings_Panel.Size = new System.Drawing.Size(218, 75);
+            this.Settings_Panel.TabIndex = 5;
+            this.Settings_Panel.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
+            this.Settings_Panel.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
+            // 
+            // PBSettings
+            // 
+            this.PBSettings.Image = global::Project.Properties.Resources.Settings;
+            this.PBSettings.Location = new System.Drawing.Point(3, 15);
+            this.PBSettings.Name = "PBSettings";
+            this.PBSettings.Size = new System.Drawing.Size(49, 47);
+            this.PBSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBSettings.TabIndex = 1;
+            this.PBSettings.TabStop = false;
+            this.PBSettings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
+            this.PBSettings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
+            // 
+            // settings
+            // 
+            this.settings.AutoSize = true;
+            this.settings.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.settings.ForeColor = System.Drawing.Color.White;
+            this.settings.Location = new System.Drawing.Point(53, 24);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(159, 23);
+            this.settings.TabIndex = 0;
+            this.settings.Text = "Einstellungen";
+            this.settings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
+            this.settings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
             // 
             // panel3
             // 
@@ -150,6 +189,7 @@
             // Dashboard
             // 
             this.Dashboard.AutoSize = true;
+            this.Dashboard.BackColor = System.Drawing.Color.Transparent;
             this.Dashboard.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Dashboard.ForeColor = System.Drawing.Color.White;
             this.Dashboard.Location = new System.Drawing.Point(58, 25);
@@ -258,46 +298,10 @@
             this.PBLogo.TabIndex = 7;
             this.PBLogo.TabStop = false;
             // 
-            // Settings_Panel
-            // 
-            this.Settings_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.Settings_Panel.Controls.Add(this.PBSettings);
-            this.Settings_Panel.Controls.Add(this.settings);
-            this.Settings_Panel.Location = new System.Drawing.Point(0, 504);
-            this.Settings_Panel.Name = "Settings_Panel";
-            this.Settings_Panel.Size = new System.Drawing.Size(218, 75);
-            this.Settings_Panel.TabIndex = 5;
-            this.Settings_Panel.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
-            this.Settings_Panel.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
-            // 
-            // PBSettings
-            // 
-            this.PBSettings.Image = global::Project.Properties.Resources.Settings;
-            this.PBSettings.Location = new System.Drawing.Point(3, 15);
-            this.PBSettings.Name = "PBSettings";
-            this.PBSettings.Size = new System.Drawing.Size(49, 47);
-            this.PBSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBSettings.TabIndex = 1;
-            this.PBSettings.TabStop = false;
-            this.PBSettings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
-            this.PBSettings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
-            // 
-            // settings
-            // 
-            this.settings.AutoSize = true;
-            this.settings.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.settings.ForeColor = System.Drawing.Color.White;
-            this.settings.Location = new System.Drawing.Point(53, 24);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(159, 23);
-            this.settings.TabIndex = 0;
-            this.settings.Text = "Einstellungen";
-            this.settings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
-            this.settings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
-            // 
             // Logout_Panel
             // 
             this.Logout_Panel.BackColor = System.Drawing.Color.MediumPurple;
+            this.Logout_Panel.BackgroundImage = global::Project.Properties.Resources.b61a6cf83ad7755c1e377888b1d75943;
             this.Logout_Panel.Controls.Add(this.PBLogout);
             this.Logout_Panel.Controls.Add(this.Logout);
             this.Logout_Panel.Location = new System.Drawing.Point(0, 724);
@@ -309,6 +313,7 @@
             // 
             // PBLogout
             // 
+            this.PBLogout.BackColor = System.Drawing.Color.Transparent;
             this.PBLogout.Image = global::Project.Properties.Resources.Open_Pane1;
             this.PBLogout.Location = new System.Drawing.Point(12, 16);
             this.PBLogout.Name = "PBLogout";
@@ -322,6 +327,7 @@
             // Logout
             // 
             this.Logout.AutoSize = true;
+            this.Logout.BackColor = System.Drawing.Color.Transparent;
             this.Logout.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Logout.ForeColor = System.Drawing.Color.White;
             this.Logout.Location = new System.Drawing.Point(67, 25);
@@ -345,7 +351,7 @@
             // 
             // CloseMain
             // 
-            this.CloseMain.BackColor = System.Drawing.Color.BlueViolet;
+            this.CloseMain.BackColor = System.Drawing.Color.Transparent;
             this.CloseMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CloseMain.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.CloseMain.FlatAppearance.BorderSize = 0;
@@ -369,6 +375,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel2.BackgroundImage = global::Project.Properties.Resources.glatte_elegante_farbverlauf_lila_hintergrund_1258_1372_ezgif1;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.PanelContainer);
             this.panel2.Controls.Add(this.PBLogo2);
             this.panel2.Controls.Add(this.Spieletraum_Mainwindow);
@@ -400,6 +408,7 @@
             // Spieletraum_Mainwindow
             // 
             this.Spieletraum_Mainwindow.AutoSize = true;
+            this.Spieletraum_Mainwindow.BackColor = System.Drawing.Color.Transparent;
             this.Spieletraum_Mainwindow.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Spieletraum_Mainwindow.ForeColor = System.Drawing.Color.White;
             this.Spieletraum_Mainwindow.Location = new System.Drawing.Point(67, 4);
@@ -435,6 +444,9 @@
             this.Text = "                                    ";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.panel1.ResumeLayout(false);
+            this.Settings_Panel.ResumeLayout(false);
+            this.Settings_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -448,9 +460,6 @@
             this.ChatBot_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBChatBot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).EndInit();
-            this.Settings_Panel.ResumeLayout(false);
-            this.Settings_Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).EndInit();
             this.Logout_Panel.ResumeLayout(false);
             this.Logout_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).EndInit();

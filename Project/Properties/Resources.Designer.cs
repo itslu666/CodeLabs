@@ -73,6 +73,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b61a6cf83ad7755c1e377888b1d75943_ezgif_com_rotate {
+            get {
+                object obj = ResourceManager.GetObject("b61a6cf83ad7755c1e377888b1d75943-ezgif.com-rotate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b61a6cf83ad7755c1e377888b1d759431 {
             get {
                 object obj = ResourceManager.GetObject("b61a6cf83ad7755c1e377888b1d759431", resourceCulture);
@@ -116,6 +126,27 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap ezgif_3_c6ed8022f3 {
             get {
                 object obj = ResourceManager.GetObject("ezgif-3-c6ed8022f3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glatte_elegante_farbverlauf_lila_hintergrund_1258_1372_ezgif_com_avif_to_png_converter {
+            get {
+                object obj = ResourceManager.GetObject("glatte-elegante-farbverlauf-lila-hintergrund_1258-1372-ezgif.com-avif-to-png-conv" +
+                        "erter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glatte_elegante_farbverlauf_lila_hintergrund_1258_1372_ezgif1 {
+            get {
+                object obj = ResourceManager.GetObject("glatte-elegante-farbverlauf-lila-hintergrund_1258-1372-ezgif1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -194,6 +225,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_01_16_0925521 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-01-16 0925521", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
@@ -217,6 +258,16 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap Settings {
             get {
                 object obj = ResourceManager.GetObject("Settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spieltraum_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Spieltraum_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

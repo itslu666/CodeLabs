@@ -90,7 +90,7 @@ namespace Project
         private void MainWindow_Load(object sender, EventArgs e)
         {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            int radius = 40;
+            int radius = 43;
 
             path.AddArc(0, 0, radius, radius, 180, 90); //Top-left corner
             path.AddArc(this.Width - radius, 0, radius, radius, 270, 90); //Top-right corner
@@ -138,7 +138,6 @@ namespace Project
         // user control stuff
         private void addUserControl(UserControl userControl)
         {
-            userControl.Dock = DockStyle.Fill;
             panel4.Controls.Clear();
             panel4.Controls.Add(userControl);
             userControl.BringToFront();
