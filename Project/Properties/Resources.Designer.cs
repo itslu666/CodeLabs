@@ -63,6 +63,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP {
+            get {
+                object obj = ResourceManager.GetObject("6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b61a6cf83ad7755c1e377888b1d75943 {
             get {
                 object obj = ResourceManager.GetObject("b61a6cf83ad7755c1e377888b1d75943", resourceCulture);
@@ -113,6 +123,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circlewhite {
+            get {
+                object obj = ResourceManager.GetObject("Circlewhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_weißsmallpng {
             get {
                 object obj = ResourceManager.GetObject("Close.weißsmallpng", resourceCulture);
@@ -136,6 +156,16 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap ezgif_3_c6ed8022f3 {
             get {
                 object obj = ResourceManager.GetObject("ezgif-3-c6ed8022f3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_3_c6ed8022f31 {
+            get {
+                object obj = ResourceManager.GetObject("ezgif-3-c6ed8022f31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -168,6 +198,16 @@ namespace Project.Properties {
             get {
                 object obj = ResourceManager.GetObject("goofy couples _silly cats Catt Care  cat silly cats silly cats pfp silly cats mat" +
                         "ching pf kitten lit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GREY_GEAR_LOADING {
+            get {
+                object obj = ResourceManager.GetObject("GREY-GEAR-LOADING", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -225,6 +265,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap purple_blue_7252901_1280 {
+            get {
+                object obj = ResourceManager.GetObject("purple-blue-7252901_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_01_16_092552 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-01-16 092552", resourceCulture);
@@ -275,9 +325,29 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Settings1 {
+            get {
+                object obj = ResourceManager.GetObject("Settings1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Spieltraum_Logo {
             get {
                 object obj = ResourceManager.GetObject("Spieltraum_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spinning_monkey_monkey {
+            get {
+                object obj = ResourceManager.GetObject("spinning-monkey-monkey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -295,9 +365,30 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tumblr_4c25ffcff5d205c5a018239b738f27a1_114cbaed_400_ezgif_com_webp_to_gif_converter {
+            get {
+                object obj = ResourceManager.GetObject("tumblr_4c25ffcff5d205c5a018239b738f27a1_114cbaed_400-ezgif.com-webp-to-gif-conver" +
+                        "ter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap User {
             get {
                 object obj = ResourceManager.GetObject("User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Userwhite {
+            get {
+                object obj = ResourceManager.GetObject("Userwhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

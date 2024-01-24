@@ -53,15 +53,15 @@
             this.CloseMain = new System.Windows.Forms.Button();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Username_LAbel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Mainwindow = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.UserProfilbild = new System.Windows.Forms.PictureBox();
-            this.PBUser = new System.Windows.Forms.PictureBox();
-            this.Username_LAbel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Settings_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBSettings)).BeginInit();
@@ -77,9 +77,9 @@
             this.Logout_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -382,18 +382,40 @@
             this.panel2.BackgroundImage = global::Project.Properties.Resources.b61a6cf83ad7755c1e377888b1d75943_ezgif_com_rotate;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.Username_LAbel);
-            this.panel2.Controls.Add(this.UserProfilbild);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.PanelContainer);
-            this.panel2.Controls.Add(this.PBUser);
             this.panel2.Controls.Add(this.PBLogo2);
             this.panel2.Controls.Add(this.Spieletraum_Mainwindow);
             this.panel2.Controls.Add(this.CloseMain);
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(218, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1349, 44);
             this.panel2.TabIndex = 5;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // Username_LAbel
+            // 
+            this.Username_LAbel.AutoSize = true;
+            this.Username_LAbel.BackColor = System.Drawing.Color.Transparent;
+            this.Username_LAbel.ForeColor = System.Drawing.Color.White;
+            this.Username_LAbel.Location = new System.Drawing.Point(1160, 14);
+            this.Username_LAbel.Name = "Username_LAbel";
+            this.Username_LAbel.Size = new System.Drawing.Size(79, 18);
+            this.Username_LAbel.TabIndex = 9;
+            this.Username_LAbel.Text = "UserTest";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Project.Properties.Resources.Userwhite;
+            this.pictureBox2.Location = new System.Drawing.Point(1257, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // PanelContainer
             // 
@@ -424,6 +446,17 @@
             this.Spieletraum_Mainwindow.TabIndex = 1;
             this.Spieletraum_Mainwindow.Text = "SpieleTraum Management Program";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Project.Properties.Resources.Circlewhite;
+            this.pictureBox3.Location = new System.Drawing.Point(1245, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(49, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -431,38 +464,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1349, 746);
             this.panel4.TabIndex = 6;
-            // 
-            // UserProfilbild
-            // 
-            this.UserProfilbild.BackColor = System.Drawing.Color.Transparent;
-            this.UserProfilbild.Image = global::Project.Properties.Resources.User;
-            this.UserProfilbild.Location = new System.Drawing.Point(1256, 9);
-            this.UserProfilbild.Name = "UserProfilbild";
-            this.UserProfilbild.Size = new System.Drawing.Size(28, 28);
-            this.UserProfilbild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UserProfilbild.TabIndex = 8;
-            this.UserProfilbild.TabStop = false;
-            // 
-            // PBUser
-            // 
-            this.PBUser.BackColor = System.Drawing.Color.Transparent;
-            this.PBUser.Image = global::Project.Properties.Resources.Circle;
-            this.PBUser.Location = new System.Drawing.Point(1245, 3);
-            this.PBUser.Name = "PBUser";
-            this.PBUser.Size = new System.Drawing.Size(49, 41);
-            this.PBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBUser.TabIndex = 7;
-            this.PBUser.TabStop = false;
-            // 
-            // Username_LAbel
-            // 
-            this.Username_LAbel.AutoSize = true;
-            this.Username_LAbel.BackColor = System.Drawing.Color.Transparent;
-            this.Username_LAbel.Location = new System.Drawing.Point(1160, 14);
-            this.Username_LAbel.Name = "Username_LAbel";
-            this.Username_LAbel.Size = new System.Drawing.Size(79, 18);
-            this.Username_LAbel.TabIndex = 9;
-            this.Username_LAbel.Text = "UserTest";
             // 
             // MainWindow
             // 
@@ -504,9 +505,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBLogout)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,7 +546,7 @@
         private Panel PanelContainer;
         private Panel panel4;
         private Label Username_LAbel;
-        private PictureBox UserProfilbild;
-        private PictureBox PBUser;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

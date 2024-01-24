@@ -33,14 +33,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PBUser = new System.Windows.Forms.PictureBox();
             this.UserProfilbild = new System.Windows.Forms.PictureBox();
-            this.UserTB = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -60,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(511, 139);
+            this.label1.Location = new System.Drawing.Point(559, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 45);
             this.label1.TabIndex = 3;
@@ -68,10 +74,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Project.Properties.Resources.Spieltraum_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(487, 200);
+            this.pictureBox1.Location = new System.Drawing.Point(482, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(327, 174);
+            this.pictureBox1.Size = new System.Drawing.Size(447, 273);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -97,13 +104,6 @@
             this.UserProfilbild.TabStop = false;
             this.UserProfilbild.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // UserTB
-            // 
-            this.UserTB.Location = new System.Drawing.Point(1171, 113);
-            this.UserTB.Name = "UserTB";
-            this.UserTB.Size = new System.Drawing.Size(175, 23);
-            this.UserTB.TabIndex = 7;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(13, 39);
@@ -115,11 +115,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel1.BackColor = System.Drawing.Color.MediumPurple;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(16, 23);
+            this.panel1.Location = new System.Drawing.Point(14, 382);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 351);
             this.panel1.TabIndex = 9;
@@ -136,17 +136,77 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Notizen";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(1210, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 23);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "UserTest";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(616, 532);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Jetzt Starten!";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::Project.Properties.Resources.purple_blue_7252901_1280;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(520, 560);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(364, 131);
+            this.panel2.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(30, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(320, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Zur Tabellen Übersicht wechseln";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::Project.Properties.Resources.tumblr_4c25ffcff5d205c5a018239b738f27a1_114cbaed_400_ezgif_com_webp_to_gif_converter;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1349, 746);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
             // UC_Home
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.UserTB);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.UserProfilbild);
             this.Controls.Add(this.PBUser);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "UC_Home";
             this.Size = new System.Drawing.Size(1349, 746);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -154,6 +214,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,9 +228,13 @@
         private PictureBox pictureBox1;
         private PictureBox PBUser;
         private PictureBox UserProfilbild;
-        private TextBox UserTB;
         private TextBox textBox1;
         private Panel panel1;
         private Label label2;
+        private Label label3;
+        private Label label4;
+        private Panel panel2;
+        private Label label5;
+        private PictureBox pictureBox2;
     }
 }
