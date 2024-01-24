@@ -48,5 +48,24 @@ namespace Project
             return resultData;
         }
 
+        public void AddData(string conString, string query)
+        {
+            using (MySqlConnection conn = new MySqlConnection(conString))
+            {
+                try
+                {
+                    conn.Open();
+                    Console.WriteLine("Connected");
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
     }
 }

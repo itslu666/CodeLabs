@@ -36,5 +36,18 @@ namespace Project
         {
             Tabelle_Button.BackColor = Color.MediumPurple;
         }
+
+
+        private void addUserControl(UserControl userControl)
+        {
+            HomePanel.Controls.Clear();
+            HomePanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+        private void Tabelle_Button_Click(object sender, EventArgs e)
+        {
+            UC_Tabelle uc_Tabelle = new UC_Tabelle();
+            addUserControl(uc_Tabelle);
+        }
     }
 }

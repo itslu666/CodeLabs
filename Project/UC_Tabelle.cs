@@ -61,7 +61,7 @@ namespace Project
 
         private void Hinzufügen_Button_Click(object sender, EventArgs e)
         {
-            Hinzufuegen hinwin = new Hinzufuegen();
+            Hinzufuegen hinwin = new Hinzufuegen(dataGridView1);
             hinwin.Show();
         }
 
@@ -84,7 +84,7 @@ namespace Project
 
             if (dataGridView1.Columns.Count == 0)
             {
-                dataGridView1.Columns.Add("id", "ID");
+                dataGridView1.Columns.Add("art_nr", "Artikel Nummer"); 
                 dataGridView1.Columns.Add("name", "Name");
                 dataGridView1.Columns.Add("description", "Beschreibung");
                 dataGridView1.Columns.Add("price", "Verkaufs Preis");
@@ -107,7 +107,7 @@ namespace Project
 
             if (dataGridView1.Columns.Count == 0)
             {
-                dataGridView1.Columns.Add("id", "Kunden Nr");
+                dataGridView1.Columns.Add("k_nr", "Kunden Nr");
                 dataGridView1.Columns.Add("anrede", "Anrede");
                 dataGridView1.Columns.Add("name", "Name");
                 dataGridView1.Columns.Add("vorname", "Vorname");
@@ -134,7 +134,7 @@ namespace Project
 
             if (dataGridView1.Columns.Count == 0)
             {
-                dataGridView1.Columns.Add("id", "ID");
+                dataGridView1.Columns.Add("l_nr", "ID");
                 dataGridView1.Columns.Add("name", "Name");
                 dataGridView1.Columns.Add("straße", "Straße");
                 dataGridView1.Columns.Add("plz", "PLZ");

@@ -102,6 +102,7 @@
             this.HinzufügenWindow_Button.TabIndex = 18;
             this.HinzufügenWindow_Button.Text = "Hinzufügen";
             this.HinzufügenWindow_Button.UseVisualStyleBackColor = false;
+            this.HinzufügenWindow_Button.Click += new System.EventHandler(this.HinzufügenWindow_Button_Click);
             // 
             // Hinzufuegen
             // 

@@ -97,6 +97,7 @@
             // UC_Import
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackgroundImage = global::Project.Properties.Resources._4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto;
             this.Controls.Add(this.Löschen_Button);
             this.Controls.Add(this.Speichern_Button);
             this.Controls.Add(this.Inport_Tabelle);

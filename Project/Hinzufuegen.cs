@@ -12,9 +12,87 @@ namespace Project
 {
     public partial class Hinzufuegen : Form
     {
-        public Hinzufuegen()
+        private DataGridView dataGridView;
+        List<TextBox> textbox_list = new List<TextBox>();
+        private string table;
+
+        public Hinzufuegen(DataGridView dataGridView1)
         {
             InitializeComponent();
+            dataGridView = dataGridView1;
+            ShowLabels();
+        }
+
+        public void ShowLabels()
+        {
+            int y = 50;
+
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                // making labels
+                Label label = new Label();
+                label.Text = column.Name;
+                label.Font = new Font("Segoe UI", 15, FontStyle.Bold);
+                label.ForeColor = Color.White;
+                label.Location = new System.Drawing.Point(20, y);
+                label.AutoSize = false;
+                label.Height = 30;
+                this.Controls.Add(label);
+
+                // making textboxes
+                TextBox textbox = new TextBox();
+                textbox.Name = "textbox_" + column.Name;
+                textbox.Font = new Font("Segoe UI", 15);
+                textbox.Location = new System.Drawing.Point(150, y);
+                textbox.AutoSize = false;
+                textbox.Size = new Size(350, 30);
+                this.Controls.Add(textbox);
+
+                textbox_list.Add(textbox);
+
+                y += 32;
+            }
+        }
+
+        private void HinzufügenWindow_Button_Click(object sender, EventArgs e)
+        {
+            DB_Connector connector = new DB_Connector();
+            StringBuilder queryText = new StringBuilder();
+            int current_index = 0;
+
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                if (column.Name == "art_nr")
+                {
+                    table = "artikel";
+                }
+                else if (column.Name == "k_nr")
+                {
+                    table = "kunden";
+                }
+                else if (column.Name == "l_nr")
+                {
+                    table = "lieferant";
+                }
+            }
+
+            queryText.Append($"INSERT INTO {table} VALUES (");
+            foreach (TextBox textbox in textbox_list)
+            {
+                current_index++;
+                queryText.Append($"'{textbox.Text}'");
+                if (current_index < textbox_list.Count)
+                {
+                    queryText.Append(", ");
+                }
+            }
+
+            queryText.Append(");");
+
+            MessageBox.Show(queryText.ToString());
+            connector.AddData("server=localhost;database=spieletraum;uid=root;pwd=;", queryText.ToString());
+
+            this.Close();
         }
 
         private void Hinzufuegen_Load(object sender, EventArgs e)

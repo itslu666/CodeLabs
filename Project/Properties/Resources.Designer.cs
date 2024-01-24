@@ -63,6 +63,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto {
+            get {
+                object obj = ResourceManager.GetObject("4493324-weiss-und-lila-verlauf-hintergrund-kostenlos-foto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP {
             get {
                 object obj = ResourceManager.GetObject("6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP", resourceCulture);
@@ -338,6 +348,16 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap Screenshot_2024_01_16_0925521 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-01-16 0925521", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_01_16_0925522 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-01-16 0925522", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

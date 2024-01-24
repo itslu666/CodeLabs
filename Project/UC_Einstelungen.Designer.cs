@@ -114,6 +114,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Project.Properties.Resources.GREY_GEAR_LOADING;
             this.pictureBox1.Location = new System.Drawing.Point(539, 58);
             this.pictureBox1.Name = "pictureBox1";
@@ -126,6 +127,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Project.Properties.Resources._4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BEnutzer_Button);

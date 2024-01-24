@@ -49,6 +49,7 @@
             // PanelContainer
             // 
             this.PanelContainer.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PanelContainer.BackgroundImage = global::Project.Properties.Resources._4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto;
             this.PanelContainer.Controls.Add(this.MetaData_Button);
             this.PanelContainer.Controls.Add(this.Kunden_Panel);
             this.PanelContainer.Controls.Add(this.Lieferant_Panel);
