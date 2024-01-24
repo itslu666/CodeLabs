@@ -26,5 +26,15 @@ namespace Project
         {
 
         }
+
+        private void Tabelle_Button_MouseEnter(object sender, EventArgs e)
+        {
+            Tabelle_Button.BackColor = Color.MediumOrchid;
+        }
+
+        private void Tabelle_Button_MouseLeave(object sender, EventArgs e)
+        {
+            Tabelle_Button.BackColor = Color.MediumPurple;
+        }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hinzufuegen));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel_Hinzufuegen = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Hinzufuegen = new System.Windows.Forms.Label();
@@ -38,18 +37,6 @@
             this.panel_Hinzufuegen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Artikel",
-            "Lieferant",
-            "Kunde"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 0;
             // 
             // panel_Hinzufuegen
             // 
@@ -123,7 +110,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.HinzufügenWindow_Button);
             this.Controls.Add(this.panel_Hinzufuegen);
-            this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Hinzufuegen";
@@ -138,8 +124,6 @@
         }
 
         #endregion
-
-        private ComboBox comboBox1;
         private Panel panel_Hinzufuegen;
         private PictureBox PBLogo2;
         private Label Spieletraum_Hinzufuegen;

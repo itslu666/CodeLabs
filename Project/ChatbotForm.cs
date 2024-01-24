@@ -10,21 +10,31 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Loeschen : Form
+    public partial class ChatbotForm : Form
     {
-        public Loeschen()
+        public ChatbotForm()
         {
             InitializeComponent();
         }
 
-
-        private void CloseLoeschen_Click(object sender, EventArgs e)
+        private void CloseBearbeiten_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void Loeschen_Load(object sender, EventArgs e)
+        private void CloseBearbeiten_MouseEnter(object sender, EventArgs e)
         {
+            CloseBearbeiten.BackColor = Color.BlueViolet;
+        }
+
+        private void CloseBearbeiten_MouseLeave(object sender, EventArgs e)
+        {
+            CloseBearbeiten.BackColor = Color.BlueViolet;
+        }
+
+        private void ChatbotForm_Load(object sender, EventArgs e)
+        {
+
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             int radius = 35;
 
@@ -32,6 +42,7 @@ namespace Project
             path.AddArc(this.Width - radius, 0, radius, radius, 270, 90); //Top-right corner
             path.AddArc(this.Width - radius, this.Height - radius, radius, radius, 0, 90); //Bottom,-right corner
             path.AddArc(0, this.Height - radius, radius, radius, 90, 90); //Bottom-left corner
+
             this.Region = new Region(path); //Create a region with the rounded rectangle path and apply it to the form
         }
 
@@ -43,7 +54,7 @@ namespace Project
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool ReleaseCapture();
 
-        private void panel_Loeschen_MouseDown(object sender, MouseEventArgs e)
+        private void panel_ChatBot_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {

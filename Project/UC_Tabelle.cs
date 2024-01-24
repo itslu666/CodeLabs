@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
 
 namespace Project
 {
@@ -311,6 +312,87 @@ namespace Project
         }
 
         private void Lieferant_Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Export_Button_Click(object sender, EventArgs e)
+        {
+            //Speicherort für die Excel-Datei fählen
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            {
+                DialogResult result = sfd.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Ausgabe der Anzahl der Zeilen in der DataGridView
+                        Console.WriteLine($"Anzahl der Zeilen in der DataGridView: {dataGridView1.Rows.Count}");
+
+                        if (dataGridView1 != null && dataGridView1.Rows.Count > 0)
+                        {
+                            // Verwenden der ClosedXML-Bibliothek zum Erstellen und Bearbeiten von Excel-Arbeitsmappen
+                            using (XLWorkbook workbook = new XLWorkbook())
+                            {
+                                var worksheet = workbook.Worksheets.Add("Sheet1");
+
+                                // Überschriften setzen
+                                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                                {
+                                    worksheet.Cell(1, i + 1).Value = dataGridView1.Columns[i].Name;
+                                }
+
+                                // Daten aus DataGridView hinzufügen
+                                for (int row = 0; row < dataGridView1.Rows.Count; row++)
+                                {
+                                    for (int col = 0; col < dataGridView1.Columns.Count; col++)
+                                    {
+                                        object cellValue = dataGridView1.Rows[row].Cells[col].Value;
+
+                                        // Überprüfe, ob der Zellenwert null ist, und ersetze ihn durch einen leeren String
+                                        worksheet.Cell(row + 2, col + 1).Value = cellValue != null ? cellValue.ToString() : string.Empty;
+                                    }
+                                }
+
+                                // Excel-Arbeitsmappe speichern
+                                workbook.SaveAs(sfd.FileName);
+
+                                Console.WriteLine("Daten erfolgreich in Excel-Datei exportiert.");
+                                MessageBox.Show("Daten erfolgreich in Excel-Datei exportiert.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Die DataGridView enthält keine Daten zum Exportieren.");
+                            MessageBox.Show("Die DataGridView enthält keine Daten zum Exportieren.", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Fehlerbehandlung im Falle eines Exportfehlers
+                        Console.WriteLine($"Fehler beim Exportieren der Daten: {ex.Message}");
+                        MessageBox.Show($"Fehler beim Exportieren der Daten: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    Console.WriteLine("Der Dialog wurde abgebrochen.");
+                }
+            }
+        }
+
+        private void MetaData_Button_MouseEnter(object sender, EventArgs e)
+        {
+            MetaData_Button.BackColor = Color.DarkBlue;
+        }
+
+        private void MetaData_Button_MouseLeave(object sender, EventArgs e)
+        {
+            MetaData_Button.BackColor = Color.BlueViolet;
+        }
+
+        private void MetaData_Button_Click(object sender, EventArgs e)
         {
 
         }

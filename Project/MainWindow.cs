@@ -153,5 +153,23 @@ namespace Project
             UC_Tabelle uc_Tabelle = new UC_Tabelle();
             addUserControl(uc_Tabelle);
         }
+
+        private void settings_MouseDown(object sender, MouseEventArgs e)
+        {
+            UC_Einstelungen uC_Einstelungen= new UC_Einstelungen();
+            addUserControl(uC_Einstelungen);
+        }
+
+        private void Import_Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            UC_Import uC_Import = new UC_Import();
+            addUserControl(uC_Import);
+        }
+
+        private void ChatBot_Panel_Click(object sender, EventArgs e)
+        {
+            ChatbotForm cb = new ChatbotForm();
+            cb.Show();  
+        }
     }
 }

@@ -113,6 +113,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bot1 {
+            get {
+                object obj = ResourceManager.GetObject("Bot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circle {
             get {
                 object obj = ResourceManager.GetObject("Circle", resourceCulture);
@@ -275,6 +285,46 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Save {
+            get {
+                object obj = ResourceManager.GetObject("Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save1 {
+            get {
+                object obj = ResourceManager.GetObject("Save1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save2 {
+            get {
+                object obj = ResourceManager.GetObject("Save2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save3 {
+            get {
+                object obj = ResourceManager.GetObject("Save3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_01_16_092552 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-01-16 092552", resourceCulture);
@@ -308,6 +358,26 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap Searchwhite {
             get {
                 object obj = ResourceManager.GetObject("Searchwhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sent {
+            get {
+                object obj = ResourceManager.GetObject("Sent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sentweiß {
+            get {
+                object obj = ResourceManager.GetObject("sentweiß", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -358,6 +428,16 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap Spreadsheet {
             get {
                 object obj = ResourceManager.GetObject("Spreadsheet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trash {
+            get {
+                object obj = ResourceManager.GetObject("Trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

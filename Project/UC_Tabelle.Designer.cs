@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelContainer = new System.Windows.Forms.Panel();
+            this.MetaData_Button = new System.Windows.Forms.Button();
             this.Kunden_Panel = new System.Windows.Forms.Button();
             this.Lieferant_Panel = new System.Windows.Forms.Button();
             this.Artikel_Panel = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             // PanelContainer
             // 
             this.PanelContainer.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PanelContainer.Controls.Add(this.MetaData_Button);
             this.PanelContainer.Controls.Add(this.Kunden_Panel);
             this.PanelContainer.Controls.Add(this.Lieferant_Panel);
             this.PanelContainer.Controls.Add(this.Artikel_Panel);
@@ -62,6 +64,22 @@
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(1343, 736);
             this.PanelContainer.TabIndex = 7;
+            // 
+            // MetaData_Button
+            // 
+            this.MetaData_Button.BackColor = System.Drawing.Color.BlueViolet;
+            this.MetaData_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.MetaData_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MetaData_Button.ForeColor = System.Drawing.Color.White;
+            this.MetaData_Button.Location = new System.Drawing.Point(486, 641);
+            this.MetaData_Button.Name = "MetaData_Button";
+            this.MetaData_Button.Size = new System.Drawing.Size(260, 46);
+            this.MetaData_Button.TabIndex = 24;
+            this.MetaData_Button.Text = "MetaData";
+            this.MetaData_Button.UseVisualStyleBackColor = false;
+            this.MetaData_Button.Click += new System.EventHandler(this.MetaData_Button_Click);
+            this.MetaData_Button.MouseEnter += new System.EventHandler(this.MetaData_Button_MouseEnter);
+            this.MetaData_Button.MouseLeave += new System.EventHandler(this.MetaData_Button_MouseLeave);
             // 
             // Kunden_Panel
             // 
@@ -114,12 +132,13 @@
             this.Export_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.Export_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Export_Button.ForeColor = System.Drawing.Color.White;
-            this.Export_Button.Location = new System.Drawing.Point(623, 650);
+            this.Export_Button.Location = new System.Drawing.Point(820, 641);
             this.Export_Button.Name = "Export_Button";
             this.Export_Button.Size = new System.Drawing.Size(260, 46);
             this.Export_Button.TabIndex = 20;
             this.Export_Button.Text = "Export Tabelle";
             this.Export_Button.UseVisualStyleBackColor = false;
+            this.Export_Button.Click += new System.EventHandler(this.Export_Button_Click);
             this.Export_Button.MouseEnter += new System.EventHandler(this.Export_Button_MouseEnter);
             this.Export_Button.MouseLeave += new System.EventHandler(this.Export_Button_MouseLeave);
             // 
@@ -145,7 +164,7 @@
             this.Loeschen_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
             this.Loeschen_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Loeschen_Button.ForeColor = System.Drawing.Color.White;
-            this.Loeschen_Button.Location = new System.Drawing.Point(659, 121);
+            this.Loeschen_Button.Location = new System.Drawing.Point(676, 121);
             this.Loeschen_Button.Name = "Loeschen_Button";
             this.Loeschen_Button.Size = new System.Drawing.Size(187, 69);
             this.Loeschen_Button.TabIndex = 18;
@@ -242,5 +261,6 @@
         private Button Kunden_Panel;
         private Button Lieferant_Panel;
         private Button Artikel_Panel;
+        private Button MetaData_Button;
     }
 }

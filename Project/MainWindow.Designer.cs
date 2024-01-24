@@ -110,6 +110,7 @@
             this.Settings_Panel.Name = "Settings_Panel";
             this.Settings_Panel.Size = new System.Drawing.Size(218, 75);
             this.Settings_Panel.TabIndex = 5;
+            this.Settings_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.settings_MouseDown);
             this.Settings_Panel.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
             this.Settings_Panel.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
             // 
@@ -122,6 +123,7 @@
             this.PBSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBSettings.TabIndex = 1;
             this.PBSettings.TabStop = false;
+            this.PBSettings.MouseDown += new System.Windows.Forms.MouseEventHandler(this.settings_MouseDown);
             this.PBSettings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
             this.PBSettings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
             // 
@@ -135,6 +137,7 @@
             this.settings.Size = new System.Drawing.Size(159, 23);
             this.settings.TabIndex = 0;
             this.settings.Text = "Einstellungen";
+            this.settings.MouseDown += new System.Windows.Forms.MouseEventHandler(this.settings_MouseDown);
             this.settings.MouseEnter += new System.EventHandler(this.Settings_Panel_MouseEnter);
             this.settings.MouseLeave += new System.EventHandler(this.Settings_Panel_MouseLeave);
             // 
@@ -228,6 +231,7 @@
             this.Import_Panel.Name = "Import_Panel";
             this.Import_Panel.Size = new System.Drawing.Size(218, 75);
             this.Import_Panel.TabIndex = 9;
+            this.Import_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Import_Panel_MouseDown);
             this.Import_Panel.MouseEnter += new System.EventHandler(this.Import_Panel_MouseEnter);
             this.Import_Panel.MouseLeave += new System.EventHandler(this.Import_Panel_MouseLeave);
             // 
@@ -240,6 +244,7 @@
             this.PBImport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBImport.TabIndex = 1;
             this.PBImport.TabStop = false;
+            this.PBImport.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Import_Panel_MouseDown);
             this.PBImport.MouseEnter += new System.EventHandler(this.Import_Panel_MouseEnter);
             this.PBImport.MouseLeave += new System.EventHandler(this.Import_Panel_MouseLeave);
             // 
@@ -253,6 +258,7 @@
             this.Import.Size = new System.Drawing.Size(84, 23);
             this.Import.TabIndex = 0;
             this.Import.Text = "Import";
+            this.Import.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Import_Panel_MouseDown);
             this.Import.MouseEnter += new System.EventHandler(this.Import_Panel_MouseEnter);
             this.Import.MouseLeave += new System.EventHandler(this.Import_Panel_MouseLeave);
             // 
@@ -265,6 +271,7 @@
             this.ChatBot_Panel.Name = "ChatBot_Panel";
             this.ChatBot_Panel.Size = new System.Drawing.Size(218, 75);
             this.ChatBot_Panel.TabIndex = 8;
+            this.ChatBot_Panel.Click += new System.EventHandler(this.ChatBot_Panel_Click);
             this.ChatBot_Panel.MouseEnter += new System.EventHandler(this.ChatBot_Panel_MouseEnter);
             this.ChatBot_Panel.MouseLeave += new System.EventHandler(this.ChatBot_Panel_MouseLeave);
             // 
@@ -433,6 +440,7 @@
             this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogo2.TabIndex = 8;
             this.PBLogo2.TabStop = false;
+            this.PBLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // Spieletraum_Mainwindow
             // 
@@ -445,6 +453,7 @@
             this.Spieletraum_Mainwindow.Size = new System.Drawing.Size(427, 29);
             this.Spieletraum_Mainwindow.TabIndex = 1;
             this.Spieletraum_Mainwindow.Text = "SpieleTraum Management Program";
+            this.Spieletraum_Mainwindow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pictureBox3
             // 

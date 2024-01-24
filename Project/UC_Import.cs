@@ -16,5 +16,25 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void Speichern_Button_MouseEnter(object sender, EventArgs e)
+        {
+            Speichern_Button.BackColor = Color.DarkBlue;
+        }
+
+        private void Speichern_Button_MouseLeave(object sender, EventArgs e)
+        {
+            Speichern_Button.BackColor = Color.BlueViolet;
+        }
+
+        private void Löschen_Button_MouseEnter(object sender, EventArgs e)
+        {
+            Löschen_Button.BackColor = Color.DarkRed;
+        }
+
+        private void Löschen_Button_MouseLeave(object sender, EventArgs e)
+        {
+            Löschen_Button.BackColor = Color.BlueViolet;
+        }
     }
 }
