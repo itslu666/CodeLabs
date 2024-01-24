@@ -59,6 +59,7 @@
             this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogo2.TabIndex = 8;
             this.PBLogo2.TabStop = false;
+            this.PBLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Loeschen_MouseDown);
             // 
             // Spieletraum_Loeschen
             // 
@@ -70,6 +71,7 @@
             this.Spieletraum_Loeschen.Size = new System.Drawing.Size(111, 29);
             this.Spieletraum_Loeschen.TabIndex = 1;
             this.Spieletraum_Loeschen.Text = "Löschen";
+            this.Spieletraum_Loeschen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Loeschen_MouseDown);
             // 
             // CloseLoeschen
             // 

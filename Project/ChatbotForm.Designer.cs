@@ -121,6 +121,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel_ChatBot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChatbotForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChatbotForm";

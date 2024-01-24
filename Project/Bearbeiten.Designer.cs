@@ -59,6 +59,7 @@
             this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogo2.TabIndex = 8;
             this.PBLogo2.TabStop = false;
+            this.PBLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Bearbeiten_MouseDown);
             // 
             // Spieletraum_Bearbeiten
             // 
@@ -70,6 +71,7 @@
             this.Spieletraum_Bearbeiten.Size = new System.Drawing.Size(140, 29);
             this.Spieletraum_Bearbeiten.TabIndex = 1;
             this.Spieletraum_Bearbeiten.Text = "Bearbeiten";
+            this.Spieletraum_Bearbeiten.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Bearbeiten_MouseDown);
             // 
             // CloseBearbeiten
             // 

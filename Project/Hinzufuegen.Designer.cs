@@ -60,6 +60,7 @@
             this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogo2.TabIndex = 8;
             this.PBLogo2.TabStop = false;
+            this.PBLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Hinzufuegen_MouseDown);
             // 
             // Spieletraum_Hinzufuegen
             // 
@@ -71,6 +72,7 @@
             this.Spieletraum_Hinzufuegen.Size = new System.Drawing.Size(147, 29);
             this.Spieletraum_Hinzufuegen.TabIndex = 1;
             this.Spieletraum_Hinzufuegen.Text = "Hinzufügen";
+            this.Spieletraum_Hinzufuegen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Hinzufuegen_MouseDown);
             // 
             // CloseHinzufuegen
             // 
