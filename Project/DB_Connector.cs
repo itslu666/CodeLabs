@@ -48,7 +48,8 @@ namespace Project
             return resultData;
         }
 
-        public void AddData(string conString, string query)
+
+        public void executeQuery(string conString, string query)
         {
             using (MySqlConnection conn = new MySqlConnection(conString))
             {
@@ -66,6 +67,5 @@ namespace Project
                 }
             }
         }
-
     }
 }

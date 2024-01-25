@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Loeschen
+    partial class Themes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loeschen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Themes));
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel_Loeschen = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Loeschen = new System.Windows.Forms.Label();
             this.CloseLoeschen = new System.Windows.Forms.Button();
-            this.textbox = new System.Windows.Forms.TextBox();
-            this.button = new System.Windows.Forms.Button();
             this.panel_Loeschen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(67, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(67, 146);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(67, 189);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel_Loeschen
             // 
@@ -48,20 +76,18 @@
             this.panel_Loeschen.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Loeschen.Location = new System.Drawing.Point(0, 0);
             this.panel_Loeschen.Name = "panel_Loeschen";
-            this.panel_Loeschen.Size = new System.Drawing.Size(521, 44);
-            this.panel_Loeschen.TabIndex = 7;
-            this.panel_Loeschen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Loeschen_MouseDown);
+            this.panel_Loeschen.Size = new System.Drawing.Size(291, 44);
+            this.panel_Loeschen.TabIndex = 8;
             // 
             // PBLogo2
             // 
-            this.PBLogo2.Image = global::Project.Properties.Resources.Trash;
+            this.PBLogo2.Image = global::Project.Properties.Resources.Change_Theme;
             this.PBLogo2.Location = new System.Drawing.Point(15, 4);
             this.PBLogo2.Name = "PBLogo2";
             this.PBLogo2.Size = new System.Drawing.Size(37, 33);
             this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogo2.TabIndex = 8;
             this.PBLogo2.TabStop = false;
-            this.PBLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Loeschen_MouseDown);
             // 
             // Spieletraum_Loeschen
             // 
@@ -70,10 +96,9 @@
             this.Spieletraum_Loeschen.ForeColor = System.Drawing.Color.White;
             this.Spieletraum_Loeschen.Location = new System.Drawing.Point(67, 4);
             this.Spieletraum_Loeschen.Name = "Spieletraum_Loeschen";
-            this.Spieletraum_Loeschen.Size = new System.Drawing.Size(111, 29);
+            this.Spieletraum_Loeschen.Size = new System.Drawing.Size(107, 29);
             this.Spieletraum_Loeschen.TabIndex = 1;
-            this.Spieletraum_Loeschen.Text = "Löschen";
-            this.Spieletraum_Loeschen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Loeschen_MouseDown);
+            this.Spieletraum_Loeschen.Text = "Themes";
             // 
             // CloseLoeschen
             // 
@@ -84,61 +109,40 @@
             this.CloseLoeschen.FlatAppearance.BorderSize = 0;
             this.CloseLoeschen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CloseLoeschen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseLoeschen.Location = new System.Drawing.Point(479, 0);
+            this.CloseLoeschen.Location = new System.Drawing.Point(242, 1);
             this.CloseLoeschen.Name = "CloseLoeschen";
             this.CloseLoeschen.Size = new System.Drawing.Size(49, 44);
             this.CloseLoeschen.TabIndex = 0;
             this.CloseLoeschen.UseVisualStyleBackColor = false;
-            this.CloseLoeschen.Click += new System.EventHandler(this.CloseLoeschen_Click);
             // 
-            // textbox
-            // 
-            this.textbox.Location = new System.Drawing.Point(101, 104);
-            this.textbox.Name = "textbox";
-            this.textbox.PlaceholderText = "Geben Sie einen Index...";
-            this.textbox.Size = new System.Drawing.Size(319, 23);
-            this.textbox.TabIndex = 8;
-            // 
-            // button
-            // 
-            this.button.Location = new System.Drawing.Point(204, 133);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(113, 23);
-            this.button.TabIndex = 9;
-            this.button.Text = "Löschen";
-            this.button.UseVisualStyleBackColor = true;
-            this.button.Click += new System.EventHandler(this.Button_Click);
-            // 
-            // Loeschen
+            // Themes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(521, 450);
-            this.Controls.Add(this.button);
-            this.Controls.Add(this.textbox);
+            this.ClientSize = new System.Drawing.Size(291, 281);
             this.Controls.Add(this.panel_Loeschen);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Loeschen";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Löschen";
-            this.Load += new System.EventHandler(this.Loeschen_Load);
+            this.Name = "Themes";
+            this.Text = "Themes";
             this.panel_Loeschen.ResumeLayout(false);
             this.panel_Loeschen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private Button button1;
+        private Button button2;
+        private Button button3;
         private Panel panel_Loeschen;
         private PictureBox PBLogo2;
         private Label Spieletraum_Loeschen;
         private Button CloseLoeschen;
-        private TextBox textbox;
-        private Button button;
     }
 }

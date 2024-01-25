@@ -153,6 +153,7 @@
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
             this.panel3.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
+            this.panel3.MouseHover += new System.EventHandler(this.panel3_MouseEnter);
             // 
             // Mainpage
             // 

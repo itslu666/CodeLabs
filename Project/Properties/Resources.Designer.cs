@@ -83,6 +83,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add {
+            get {
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b61a6cf83ad7755c1e377888b1d75943 {
             get {
                 object obj = ResourceManager.GetObject("b61a6cf83ad7755c1e377888b1d75943", resourceCulture);
@@ -133,6 +143,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Change_Theme {
+            get {
+                object obj = ResourceManager.GetObject("Change Theme", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circle {
             get {
                 object obj = ResourceManager.GetObject("Circle", resourceCulture);
@@ -166,6 +186,16 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap Closeweiß {
             get {
                 object obj = ResourceManager.GetObject("Closeweiß", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Create {
+            get {
+                object obj = ResourceManager.GetObject("Create", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

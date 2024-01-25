@@ -67,13 +67,13 @@ namespace Project
 
         private void Loeschen_Button_MouseDown(object sender, MouseEventArgs e)
         {
-            Loeschen loesch = new Loeschen();
+            Loeschen loesch = new Loeschen(dataGridView1);
             loesch.Show();
         }
 
         private void Bearbeiten_Button_Click(object sender, EventArgs e)
         {
-            Bearbeiten beab = new Bearbeiten();
+            Bearbeiten beab = new Bearbeiten(dataGridView1);
             beab.Show();
         }
 
@@ -86,9 +86,9 @@ namespace Project
             {
                 dataGridView1.Columns.Add("art_nr", "Artikel Nummer"); 
                 dataGridView1.Columns.Add("name", "Name");
-                dataGridView1.Columns.Add("description", "Beschreibung");
-                dataGridView1.Columns.Add("price", "Verkaufs Preis");
-                dataGridView1.Columns.Add("wg_id", "Warengruppe ID");
+                dataGridView1.Columns.Add("beschreibung", "Beschreibung");
+                dataGridView1.Columns.Add("vk_preis", "Verkaufs Preis");
+                dataGridView1.Columns.Add("wg_nr", "Warengruppe ID");
             }
 
             List<Artikel> artList = getArtikel();
@@ -114,8 +114,8 @@ namespace Project
                 dataGridView1.Columns.Add("straße", "Straße");
                 dataGridView1.Columns.Add("plz", "PLZ");
                 dataGridView1.Columns.Add("ort", "Ort");
-                dataGridView1.Columns.Add("mail", "E-Mail");
-                dataGridView1.Columns.Add("tel", "Tel-Nr");
+                dataGridView1.Columns.Add("email", "E-Mail");
+                dataGridView1.Columns.Add("tel_nr", "Tel-Nr");
                 dataGridView1.Columns.Add("kat_nr", "Kat_Nr");
 
                 List<Kunde> kundList = getKunden();
@@ -139,8 +139,8 @@ namespace Project
                 dataGridView1.Columns.Add("straße", "Straße");
                 dataGridView1.Columns.Add("plz", "PLZ");
                 dataGridView1.Columns.Add("ort", "Ort");
-                dataGridView1.Columns.Add("mail", "E-Mail");
-                dataGridView1.Columns.Add("tel", "Tel-Nr");
+                dataGridView1.Columns.Add("email", "E-Mail");
+                dataGridView1.Columns.Add("tel_nr", "Tel-Nr");
 
                 List<Lieferant> lieferList = getLieferant();
 
@@ -394,7 +394,17 @@ namespace Project
 
         private void MetaData_Button_Click(object sender, EventArgs e)
         {
+            DB_Connector connector = new DB_Connector();
 
+            var tables = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SHOW TABLES");
+            StringBuilder tablesString = new StringBuilder();
+
+            foreach (var item in tables)
+            {
+                tablesString.Append(item[0].ToString() + "\n");
+            }
+
+            MessageBox.Show(tablesString.ToString());
         }
     }
 }

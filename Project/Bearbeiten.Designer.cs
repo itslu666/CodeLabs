@@ -52,7 +52,7 @@
             // 
             // PBLogo2
             // 
-            this.PBLogo2.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo2.Image")));
+            this.PBLogo2.Image = global::Project.Properties.Resources.Create;
             this.PBLogo2.Location = new System.Drawing.Point(15, 4);
             this.PBLogo2.Name = "PBLogo2";
             this.PBLogo2.Size = new System.Drawing.Size(37, 33);

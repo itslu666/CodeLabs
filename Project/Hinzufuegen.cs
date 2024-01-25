@@ -90,7 +90,7 @@ namespace Project
             queryText.Append(");");
 
             MessageBox.Show(queryText.ToString());
-            connector.AddData("server=localhost;database=spieletraum;uid=root;pwd=;", queryText.ToString());
+            connector.executeQuery("server=localhost;database=spieletraum;uid=root;pwd=;", queryText.ToString());
 
             this.Close();
         }
@@ -128,10 +128,6 @@ namespace Project
                 }
             }
         }
-
-        private void CloseHinzufuegen_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+       
     }
 }

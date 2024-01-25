@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,66 @@ namespace Project
 {
     public partial class Loeschen : Form
     {
-        public Loeschen()
+        private DataGridView dataGridView;
+        private string table;
+        private string indexString;
+        private string queryText;
+
+        public Loeschen(DataGridView dataGridView1)
         {
             InitializeComponent();
+            dataGridView = dataGridView1;
         }
+
+        private int chooseIndex()
+        {
+            int indexin = 0;
+            string chosenIndex = textbox.Text;
+
+            try
+            {
+                indexin = Convert.ToInt32(chosenIndex);
+            }
+            catch
+            {
+                MessageBox.Show("Falsche eingabe, muss Zahl sein.");
+            }
+            return indexin;
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            deleteDataset();
+        }
+
+        private void deleteDataset()
+        {
+            DB_Connector connector = new DB_Connector();
+            int index = chooseIndex();
+
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                if (column.Name == "art_nr")
+                {
+                    table = "artikel";
+                    indexString = "Art_Nr";
+                } else if (column.Name == "k_nr")
+                {
+                    table = "kunden";
+                    indexString = "K_NR";
+                } else if (column.Name == "l_nr")
+                {
+                    table = "lieferant";
+                    indexString = "L_Nr";
+                }
+            }
+
+            queryText = $"DELETE FROM {table} WHERE {indexString} = {index};";
+            MessageBox.Show(queryText);
+
+            connector.executeQuery("server=localhost;database=spieletraum;uid=root;pwd=;", queryText);
+        }
+
 
 
         private void CloseLoeschen_Click(object sender, EventArgs e)

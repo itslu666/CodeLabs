@@ -53,7 +53,7 @@
             // 
             // PBLogo2
             // 
-            this.PBLogo2.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo2.Image")));
+            this.PBLogo2.Image = global::Project.Properties.Resources.Add;
             this.PBLogo2.Location = new System.Drawing.Point(15, 4);
             this.PBLogo2.Name = "PBLogo2";
             this.PBLogo2.Size = new System.Drawing.Size(37, 33);
@@ -88,7 +88,6 @@
             this.CloseHinzufuegen.Size = new System.Drawing.Size(49, 44);
             this.CloseHinzufuegen.TabIndex = 0;
             this.CloseHinzufuegen.UseVisualStyleBackColor = false;
-            this.CloseHinzufuegen.Click += new System.EventHandler(this.CloseHinzufuegen_Click);
             // 
             // HinzufügenWindow_Button
             // 

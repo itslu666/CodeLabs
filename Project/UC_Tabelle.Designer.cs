@@ -72,7 +72,7 @@
             this.MetaData_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.MetaData_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MetaData_Button.ForeColor = System.Drawing.Color.White;
-            this.MetaData_Button.Location = new System.Drawing.Point(486, 641);
+            this.MetaData_Button.Location = new System.Drawing.Point(428, 665);
             this.MetaData_Button.Name = "MetaData_Button";
             this.MetaData_Button.Size = new System.Drawing.Size(260, 46);
             this.MetaData_Button.TabIndex = 24;
@@ -87,7 +87,7 @@
             this.Kunden_Panel.BackColor = System.Drawing.Color.BlueViolet;
             this.Kunden_Panel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Kunden_Panel.ForeColor = System.Drawing.Color.White;
-            this.Kunden_Panel.Location = new System.Drawing.Point(30, 523);
+            this.Kunden_Panel.Location = new System.Drawing.Point(3, 495);
             this.Kunden_Panel.Name = "Kunden_Panel";
             this.Kunden_Panel.Size = new System.Drawing.Size(186, 63);
             this.Kunden_Panel.TabIndex = 23;
@@ -102,7 +102,7 @@
             this.Lieferant_Panel.BackColor = System.Drawing.Color.BlueViolet;
             this.Lieferant_Panel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Lieferant_Panel.ForeColor = System.Drawing.Color.White;
-            this.Lieferant_Panel.Location = new System.Drawing.Point(30, 415);
+            this.Lieferant_Panel.Location = new System.Drawing.Point(2, 373);
             this.Lieferant_Panel.Name = "Lieferant_Panel";
             this.Lieferant_Panel.Size = new System.Drawing.Size(186, 63);
             this.Lieferant_Panel.TabIndex = 22;
@@ -117,7 +117,7 @@
             this.Artikel_Panel.BackColor = System.Drawing.Color.BlueViolet;
             this.Artikel_Panel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Artikel_Panel.ForeColor = System.Drawing.Color.White;
-            this.Artikel_Panel.Location = new System.Drawing.Point(30, 310);
+            this.Artikel_Panel.Location = new System.Drawing.Point(2, 242);
             this.Artikel_Panel.Name = "Artikel_Panel";
             this.Artikel_Panel.Size = new System.Drawing.Size(186, 63);
             this.Artikel_Panel.TabIndex = 21;
@@ -133,7 +133,7 @@
             this.Export_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.Export_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Export_Button.ForeColor = System.Drawing.Color.White;
-            this.Export_Button.Location = new System.Drawing.Point(820, 641);
+            this.Export_Button.Location = new System.Drawing.Point(756, 665);
             this.Export_Button.Name = "Export_Button";
             this.Export_Button.Size = new System.Drawing.Size(260, 46);
             this.Export_Button.TabIndex = 20;
@@ -149,7 +149,7 @@
             this.Bearbeiten_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
             this.Bearbeiten_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Bearbeiten_Button.ForeColor = System.Drawing.Color.White;
-            this.Bearbeiten_Button.Location = new System.Drawing.Point(1009, 121);
+            this.Bearbeiten_Button.Location = new System.Drawing.Point(930, 17);
             this.Bearbeiten_Button.Name = "Bearbeiten_Button";
             this.Bearbeiten_Button.Size = new System.Drawing.Size(187, 69);
             this.Bearbeiten_Button.TabIndex = 19;
@@ -165,7 +165,7 @@
             this.Loeschen_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
             this.Loeschen_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Loeschen_Button.ForeColor = System.Drawing.Color.White;
-            this.Loeschen_Button.Location = new System.Drawing.Point(676, 121);
+            this.Loeschen_Button.Location = new System.Drawing.Point(617, 17);
             this.Loeschen_Button.Name = "Loeschen_Button";
             this.Loeschen_Button.Size = new System.Drawing.Size(187, 69);
             this.Loeschen_Button.TabIndex = 18;
@@ -182,7 +182,7 @@
             this.Hinzufügen_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
             this.Hinzufügen_Button.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Hinzufügen_Button.ForeColor = System.Drawing.Color.White;
-            this.Hinzufügen_Button.Location = new System.Drawing.Point(345, 121);
+            this.Hinzufügen_Button.Location = new System.Drawing.Point(311, 17);
             this.Hinzufügen_Button.Name = "Hinzufügen_Button";
             this.Hinzufügen_Button.Size = new System.Drawing.Size(187, 69);
             this.Hinzufügen_Button.TabIndex = 17;
@@ -194,17 +194,17 @@
             // 
             // Suchleiste
             // 
-            this.Suchleiste.Location = new System.Drawing.Point(239, 227);
+            this.Suchleiste.Location = new System.Drawing.Point(194, 111);
             this.Suchleiste.Name = "Suchleiste";
             this.Suchleiste.PlaceholderText = "Suchen...";
-            this.Suchleiste.Size = new System.Drawing.Size(1053, 23);
+            this.Suchleiste.Size = new System.Drawing.Size(1098, 23);
             this.Suchleiste.TabIndex = 14;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.MediumPurple;
             this.pictureBox2.Image = global::Project.Properties.Resources.Search;
-            this.pictureBox2.Location = new System.Drawing.Point(1298, 227);
+            this.pictureBox2.Location = new System.Drawing.Point(1298, 111);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,10 +229,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(239, 256);
+            this.dataGridView1.Location = new System.Drawing.Point(194, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1090, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(1135, 519);
             this.dataGridView1.TabIndex = 0;
             // 
             // UC_Tabelle
