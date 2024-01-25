@@ -9,8 +9,36 @@ namespace Project
 {
     public class DB_Connector
     {
-        public List<List<string?>> GetData(string conString, string query)
+        public string server = "localhost";
+        public string database = "spieletraum";
+        public string uid = "root";
+        public string pwd = "";
+        public string conString;
+        // server=localhost;database=spieletraum;uid=root;pwd=;
+
+        public DB_Connector()
         {
+            UpdateConString();
+        }
+
+        public void UpdateConString()
+        {
+            conString = $"server={server};database={database};uid={uid};pwd={pwd}";
+        }
+
+        public void ChangeServer_Database(string newServer, string newDatabase, string newUid, string newPwd)
+        {
+            server = newServer;
+            database = newDatabase;
+            uid = newUid;
+            pwd = newPwd;
+
+            UpdateConString();
+        }
+
+        public List<List<string?>> GetData(string query)
+        {
+            // make 2d array for data
             var resultData = new List<List<string?>>();
 
             using (MySqlConnection conn = new MySqlConnection(conString))
@@ -24,17 +52,21 @@ namespace Project
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
+                        // get num of columns in table
                         int columnCount = reader.FieldCount;
 
                         while (reader.Read())
                         {
+                            // make list for rows
                             var row = new List<string?>();
 
                             for (int i = 0; i < columnCount; i++)
                             {
+                                // add row to list
                                 row.Add(reader[i].ToString());
                             }
 
+                            // add rowlist to resultdata
                             resultData.Add(row);
                         }
                     }
@@ -49,7 +81,7 @@ namespace Project
         }
 
 
-        public void executeQuery(string conString, string query)
+        public void executeQuery(string query)
         {
             using (MySqlConnection conn = new MySqlConnection(conString))
             {
@@ -64,6 +96,24 @@ namespace Project
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        public void addData(string tableName, List<string> columns, List<List<string>> valuesList)
+        {
+            using (MySqlConnection conn = new MySqlConnection(conString))
+            {
+                conn.Open();
+
+                // for each value list in value list
+                foreach(var values in valuesList)
+                {
+                    // make query string (make string 'value' via lambda & join with ,)
+                    string queryString = $"INSERT INTO {tableName} ({string.Join(", ", columns)}) VALUES ({string.Join(", ", values.Select(value => $"'{value}'"))})";
+
+                    MySqlCommand cmd = new(queryString, conn);
+                    cmd.ExecuteNonQuery();
                 }
             }
         }

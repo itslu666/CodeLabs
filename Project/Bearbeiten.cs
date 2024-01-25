@@ -126,7 +126,7 @@ namespace Project
 
             queryText.Append($"WHERE {indexString} = {index}");
 
-            connector.executeQuery("server=localhost;database=spieletraum;uid=root;pwd=;", queryText.ToString());
+            connector.executeQuery(queryText.ToString());
             MessageBox.Show(queryText.ToString());
         }
 

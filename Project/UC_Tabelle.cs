@@ -154,7 +154,7 @@ namespace Project
         private List<Artikel> getArtikel()
         {
             DB_Connector connector = new DB_Connector();
-            var data = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM artikel");
+            var data = connector.GetData("SELECT * FROM artikel");
 
             // Leere die Liste vor dem Hinzufügen neuer Daten
             artikelList.Clear();
@@ -179,7 +179,7 @@ namespace Project
         private List<Kunde> getKunden()
         {
             DB_Connector connector = new DB_Connector();
-            var data = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT * FROM kunden");
+            var data = connector.GetData("SELECT * FROM kunden");
 
             // Leere die Liste vor dem Hinzufügen neuer Daten
             kundenList.Clear();
@@ -209,7 +209,7 @@ namespace Project
         private List<Lieferant> getLieferant()
         {
             DB_Connector connector = new DB_Connector();
-            var data = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=", "SELECT * FROM lieferant");
+            var data = connector.GetData("SELECT * FROM lieferant");
 
             lieferantList.Clear();
 
@@ -394,30 +394,8 @@ namespace Project
 
         private void MetaData_Button_Click(object sender, EventArgs e)
         {
-            DB_Connector connector = new DB_Connector();
-
-            var tables = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SHOW TABLES");
-            List<(string, string)> metadata = new();
-
-
-            foreach (var item in tables)
-            {
-                var table = item[0];
-                var metaDataString = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", $"DESCRIBE {table}");
-
-                foreach (var entry in metaDataString)
-                {
-                    var name = entry[0];
-                    var type = entry[1];
-                    metadata.Add((name, type));
-                }
-            }
-            foreach (var (name, type) in metadata)
-            {
-                MessageBox.Show(name);
-                MessageBox.Show(type);
-            }
-
+            MetaData_Form metaData_Form = new MetaData_Form();
+            metaData_Form.ShowDialog();
         }
     }
 }

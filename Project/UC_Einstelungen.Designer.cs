@@ -28,118 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PW_Button = new System.Windows.Forms.Button();
-            this.US_Button = new System.Windows.Forms.Button();
-            this.Server_Button = new System.Windows.Forms.Button();
-            this.DB_Button = new System.Windows.Forms.Button();
-            this.BEnutzer_Button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            PW_Button = new Button();
+            US_Button = new Button();
+            Server_Button = new Button();
+            DB_Button = new Button();
+            BEnutzer_Button = new Button();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // PW_Button
             // 
-            this.PW_Button.BackColor = System.Drawing.Color.MediumPurple;
-            this.PW_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.PW_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.PW_Button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PW_Button.ForeColor = System.Drawing.Color.White;
-            this.PW_Button.Location = new System.Drawing.Point(223, 317);
-            this.PW_Button.Name = "PW_Button";
-            this.PW_Button.Size = new System.Drawing.Size(233, 85);
-            this.PW_Button.TabIndex = 0;
-            this.PW_Button.Text = "Passwort ändern";
-            this.PW_Button.UseVisualStyleBackColor = false;
+            PW_Button.BackColor = Color.MediumPurple;
+            PW_Button.FlatAppearance.MouseDownBackColor = Color.White;
+            PW_Button.FlatAppearance.MouseOverBackColor = Color.Purple;
+            PW_Button.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            PW_Button.ForeColor = Color.White;
+            PW_Button.Location = new Point(223, 317);
+            PW_Button.Name = "PW_Button";
+            PW_Button.Size = new Size(233, 85);
+            PW_Button.TabIndex = 0;
+            PW_Button.Text = "Passwort ändern";
+            PW_Button.UseVisualStyleBackColor = false;
+            PW_Button.Click += PW_Button_Click;
             // 
             // US_Button
             // 
-            this.US_Button.BackColor = System.Drawing.Color.MediumPurple;
-            this.US_Button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.US_Button.ForeColor = System.Drawing.Color.White;
-            this.US_Button.Location = new System.Drawing.Point(550, 317);
-            this.US_Button.Name = "US_Button";
-            this.US_Button.Size = new System.Drawing.Size(233, 85);
-            this.US_Button.TabIndex = 1;
-            this.US_Button.Text = "Username ändern";
-            this.US_Button.UseVisualStyleBackColor = false;
+            US_Button.BackColor = Color.MediumPurple;
+            US_Button.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            US_Button.ForeColor = Color.White;
+            US_Button.Location = new Point(550, 317);
+            US_Button.Name = "US_Button";
+            US_Button.Size = new Size(233, 85);
+            US_Button.TabIndex = 1;
+            US_Button.Text = "Username ändern";
+            US_Button.UseVisualStyleBackColor = false;
             // 
             // Server_Button
             // 
-            this.Server_Button.BackColor = System.Drawing.Color.MediumPurple;
-            this.Server_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Server_Button.ForeColor = System.Drawing.Color.White;
-            this.Server_Button.Location = new System.Drawing.Point(871, 317);
-            this.Server_Button.Name = "Server_Button";
-            this.Server_Button.Size = new System.Drawing.Size(233, 85);
-            this.Server_Button.TabIndex = 2;
-            this.Server_Button.Text = "Server wechseln";
-            this.Server_Button.UseVisualStyleBackColor = false;
+            Server_Button.BackColor = Color.MediumPurple;
+            Server_Button.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Server_Button.ForeColor = Color.White;
+            Server_Button.Location = new Point(871, 317);
+            Server_Button.Name = "Server_Button";
+            Server_Button.Size = new Size(233, 85);
+            Server_Button.TabIndex = 2;
+            Server_Button.Text = "Server wechseln";
+            Server_Button.UseVisualStyleBackColor = false;
+            Server_Button.Click += Server_Button_Click;
             // 
             // DB_Button
             // 
-            this.DB_Button.BackColor = System.Drawing.Color.MediumPurple;
-            this.DB_Button.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DB_Button.ForeColor = System.Drawing.Color.White;
-            this.DB_Button.Location = new System.Drawing.Point(223, 513);
-            this.DB_Button.Name = "DB_Button";
-            this.DB_Button.Size = new System.Drawing.Size(233, 85);
-            this.DB_Button.TabIndex = 3;
-            this.DB_Button.Text = "Datenbank wechseln";
-            this.DB_Button.UseVisualStyleBackColor = false;
+            DB_Button.BackColor = Color.MediumPurple;
+            DB_Button.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            DB_Button.ForeColor = Color.White;
+            DB_Button.Location = new Point(223, 513);
+            DB_Button.Name = "DB_Button";
+            DB_Button.Size = new Size(233, 85);
+            DB_Button.TabIndex = 3;
+            DB_Button.Text = "Datenbank wechseln";
+            DB_Button.UseVisualStyleBackColor = false;
             // 
             // BEnutzer_Button
             // 
-            this.BEnutzer_Button.BackColor = System.Drawing.Color.MediumPurple;
-            this.BEnutzer_Button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BEnutzer_Button.ForeColor = System.Drawing.Color.White;
-            this.BEnutzer_Button.Location = new System.Drawing.Point(871, 513);
-            this.BEnutzer_Button.Name = "BEnutzer_Button";
-            this.BEnutzer_Button.Size = new System.Drawing.Size(233, 85);
-            this.BEnutzer_Button.TabIndex = 4;
-            this.BEnutzer_Button.Text = "Benutzer Einstellung";
-            this.BEnutzer_Button.UseVisualStyleBackColor = false;
+            BEnutzer_Button.BackColor = Color.MediumPurple;
+            BEnutzer_Button.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BEnutzer_Button.ForeColor = Color.White;
+            BEnutzer_Button.Location = new Point(871, 513);
+            BEnutzer_Button.Name = "BEnutzer_Button";
+            BEnutzer_Button.Size = new Size(233, 85);
+            BEnutzer_Button.TabIndex = 4;
+            BEnutzer_Button.Text = "Benutzer Einstellung";
+            BEnutzer_Button.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumPurple;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(551, 513);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 85);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Themes";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.MediumPurple;
+            button1.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(551, 513);
+            button1.Name = "button1";
+            button1.Size = new Size(233, 85);
+            button1.TabIndex = 5;
+            button1.Text = "Themes";
+            button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Project.Properties.Resources.GREY_GEAR_LOADING;
-            this.pictureBox1.Location = new System.Drawing.Point(539, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 224);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.GREY_GEAR_LOADING;
+            pictureBox1.Location = new Point(539, 58);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(267, 224);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
             // UC_Einstelungen
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::Project.Properties.Resources._4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.BEnutzer_Button);
-            this.Controls.Add(this.DB_Button);
-            this.Controls.Add(this.Server_Button);
-            this.Controls.Add(this.US_Button);
-            this.Controls.Add(this.PW_Button);
-            this.Name = "UC_Einstelungen";
-            this.Size = new System.Drawing.Size(1349, 746);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleMode = AutoScaleMode.Inherit;
+            BackColor = SystemColors.Control;
+            BackgroundImage = Properties.Resources._4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto;
+            Controls.Add(pictureBox1);
+            Controls.Add(button1);
+            Controls.Add(BEnutzer_Button);
+            Controls.Add(DB_Button);
+            Controls.Add(Server_Button);
+            Controls.Add(US_Button);
+            Controls.Add(PW_Button);
+            Name = "UC_Einstelungen";
+            Size = new Size(1349, 746);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -76,7 +76,7 @@ namespace Project
         private void LoginButton_Click(object sender, EventArgs e)
         {
             // get data from database
-            var loginData = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SELECT M_Nr, passwort FROM mitarbeiter");
+            var loginData = connector.GetData("SELECT M_Nr, passwort FROM mitarbeiter");
 
             foreach (var credentials in loginData)
             {

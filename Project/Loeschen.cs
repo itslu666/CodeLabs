@@ -70,7 +70,7 @@ namespace Project
             queryText = $"DELETE FROM {table} WHERE {indexString} = {index};";
             MessageBox.Show(queryText);
 
-            connector.executeQuery("server=localhost;database=spieletraum;uid=root;pwd=;", queryText);
+            connector.executeQuery(queryText);
         }
 
 

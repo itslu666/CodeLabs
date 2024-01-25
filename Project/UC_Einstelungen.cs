@@ -16,5 +16,17 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void PW_Button_Click(object sender, EventArgs e)
+        {
+            Pw_aendern pw = new Pw_aendern();
+            pw.ShowDialog();
+        }
+
+        private void Server_Button_Click(object sender, EventArgs e)
+        {
+            ChangeServer cs = new ChangeServer();
+            cs.ShowDialog();
+        }
     }
 }
