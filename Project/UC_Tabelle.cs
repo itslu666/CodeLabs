@@ -397,25 +397,27 @@ namespace Project
             DB_Connector connector = new DB_Connector();
 
             var tables = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SHOW TABLES");
-            StringBuilder tablesString = new StringBuilder();
-            StringBuilder metaData = new StringBuilder();
+            List<(string, string)> metadata = new();
+
 
             foreach (var item in tables)
             {
-                tablesString.Append(item.ToString() + "\n");
-                var metaDataString = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", $"DESCRIBE {item}");
+                var table = item[0];
+                var metaDataString = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", $"DESCRIBE {table}");
 
-                foreach (var metadata in metaDataString)
+                foreach (var entry in metaDataString)
                 {
-                    foreach (var value in metadata)
-                    {
-                        metaData.Append(value + "\n");
-                    }
+                    var name = entry[0];
+                    var type = entry[1];
+                    metadata.Add((name, type));
                 }
             }
+            foreach (var (name, type) in metadata)
+            {
+                MessageBox.Show(name);
+                MessageBox.Show(type);
+            }
 
-            MessageBox.Show(tablesString.ToString());
-            MessageBox.Show(metaData.ToString());
         }
     }
 }
