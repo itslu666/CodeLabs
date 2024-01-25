@@ -398,13 +398,24 @@ namespace Project
 
             var tables = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", "SHOW TABLES");
             StringBuilder tablesString = new StringBuilder();
+            StringBuilder metaData = new StringBuilder();
 
             foreach (var item in tables)
             {
-                tablesString.Append(item[0].ToString() + "\n");
+                tablesString.Append(item.ToString() + "\n");
+                var metaDataString = connector.GetData("server=localhost;database=spieletraum;uid=root;pwd=;", $"DESCRIBE {item}");
+
+                foreach (var metadata in metaDataString)
+                {
+                    foreach (var value in metadata)
+                    {
+                        metaData.Append(value + "\n");
+                    }
+                }
             }
 
             MessageBox.Show(tablesString.ToString());
+            MessageBox.Show(metaData.ToString());
         }
     }
 }

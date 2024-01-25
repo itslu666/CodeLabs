@@ -88,6 +88,7 @@
             this.CloseHinzufuegen.Size = new System.Drawing.Size(49, 44);
             this.CloseHinzufuegen.TabIndex = 0;
             this.CloseHinzufuegen.UseVisualStyleBackColor = false;
+            this.CloseHinzufuegen.Click += new System.EventHandler(this.CloseHinzufuegen_Click);
             // 
             // HinzufügenWindow_Button
             // 

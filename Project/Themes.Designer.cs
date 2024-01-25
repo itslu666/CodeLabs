@@ -29,43 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Themes));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Graumodus_Button = new System.Windows.Forms.Button();
+            this.Standart_Button = new System.Windows.Forms.Button();
+            this.Rotmodus_Button = new System.Windows.Forms.Button();
             this.panel_Loeschen = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Loeschen = new System.Windows.Forms.Label();
             this.CloseLoeschen = new System.Windows.Forms.Button();
+            this.Blaumodus_Button = new System.Windows.Forms.Button();
             this.panel_Loeschen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Graumodus_Button
             // 
-            this.button1.Location = new System.Drawing.Point(67, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Graumodus_Button.Location = new System.Drawing.Point(67, 95);
+            this.Graumodus_Button.Name = "Graumodus_Button";
+            this.Graumodus_Button.Size = new System.Drawing.Size(154, 23);
+            this.Graumodus_Button.TabIndex = 0;
+            this.Graumodus_Button.Text = "Grau Modus";
+            this.Graumodus_Button.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Standart_Button
             // 
-            this.button2.Location = new System.Drawing.Point(67, 146);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Standart_Button.Location = new System.Drawing.Point(67, 138);
+            this.Standart_Button.Name = "Standart_Button";
+            this.Standart_Button.Size = new System.Drawing.Size(154, 23);
+            this.Standart_Button.TabIndex = 1;
+            this.Standart_Button.Text = "Standart";
+            this.Standart_Button.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Rotmodus_Button
             // 
-            this.button3.Location = new System.Drawing.Point(67, 189);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Rotmodus_Button.Location = new System.Drawing.Point(67, 183);
+            this.Rotmodus_Button.Name = "Rotmodus_Button";
+            this.Rotmodus_Button.Size = new System.Drawing.Size(154, 23);
+            this.Rotmodus_Button.TabIndex = 2;
+            this.Rotmodus_Button.Text = "Rot Modus";
+            this.Rotmodus_Button.UseVisualStyleBackColor = true;
             // 
             // panel_Loeschen
             // 
@@ -115,15 +116,25 @@
             this.CloseLoeschen.TabIndex = 0;
             this.CloseLoeschen.UseVisualStyleBackColor = false;
             // 
+            // Blaumodus_Button
+            // 
+            this.Blaumodus_Button.Location = new System.Drawing.Point(67, 225);
+            this.Blaumodus_Button.Name = "Blaumodus_Button";
+            this.Blaumodus_Button.Size = new System.Drawing.Size(154, 23);
+            this.Blaumodus_Button.TabIndex = 9;
+            this.Blaumodus_Button.Text = "Blau Modus";
+            this.Blaumodus_Button.UseVisualStyleBackColor = true;
+            // 
             // Themes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 281);
+            this.Controls.Add(this.Blaumodus_Button);
             this.Controls.Add(this.panel_Loeschen);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Rotmodus_Button);
+            this.Controls.Add(this.Standart_Button);
+            this.Controls.Add(this.Graumodus_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Themes";
@@ -137,12 +148,13 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button Graumodus_Button;
+        private Button Standart_Button;
+        private Button Rotmodus_Button;
         private Panel panel_Loeschen;
         private PictureBox PBLogo2;
         private Label Spieletraum_Loeschen;
         private Button CloseLoeschen;
+        private Button Blaumodus_Button;
     }
 }

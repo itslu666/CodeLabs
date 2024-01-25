@@ -128,6 +128,10 @@ namespace Project
                 }
             }
         }
-       
+
+        private void CloseHinzufuegen_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
