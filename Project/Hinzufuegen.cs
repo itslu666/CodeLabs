@@ -89,7 +89,6 @@ namespace Project
 
             queryText.Append(");");
 
-            MessageBox.Show(queryText.ToString());
             connector.executeQuery(queryText.ToString());
 
             this.Close();

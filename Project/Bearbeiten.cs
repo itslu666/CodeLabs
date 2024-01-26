@@ -127,7 +127,6 @@ namespace Project
             queryText.Append($"WHERE {indexString} = {index}");
 
             connector.executeQuery(queryText.ToString());
-            MessageBox.Show(queryText.ToString());
         }
 
 

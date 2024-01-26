@@ -68,7 +68,6 @@ namespace Project
             }
 
             queryText = $"DELETE FROM {table} WHERE {indexString} = {index};";
-            MessageBox.Show(queryText);
 
             connector.executeQuery(queryText);
         }

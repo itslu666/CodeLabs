@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.HomePanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +38,6 @@
             this.PBUser = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.HomePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUser)).BeginInit();
@@ -48,7 +46,6 @@
             // HomePanel
             // 
             this.HomePanel.BackgroundImage = global::Project.Properties.Resources._4493324_weiss_und_lila_verlauf_hintergrund_kostenlos_foto;
-            this.HomePanel.Controls.Add(this.pictureBox2);
             this.HomePanel.Controls.Add(this.label2);
             this.HomePanel.Controls.Add(this.pictureBox1);
             this.HomePanel.Controls.Add(this.label1);
@@ -62,17 +59,6 @@
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(1349, 746);
             this.HomePanel.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Project.Properties.Resources.polish_cow_dancing_cow;
-            this.pictureBox2.Location = new System.Drawing.Point(1249, 696);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -126,11 +112,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(633, 96);
+            this.label3.Location = new System.Drawing.Point(658, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 23);
+            this.label3.Size = new System.Drawing.Size(58, 23);
             this.label3.TabIndex = 19;
-            this.label3.Text = "UserTest";
+            this.label3.Text = "User";
             // 
             // UserProfilbild
             // 
@@ -177,7 +163,6 @@
             this.Size = new System.Drawing.Size(1349, 746);
             this.HomePanel.ResumeLayout(false);
             this.HomePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilbild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUser)).EndInit();
@@ -188,7 +173,6 @@
         #endregion
 
         private Panel HomePanel;
-        private PictureBox pictureBox2;
         private Label label2;
         private PictureBox pictureBox1;
         private Label label1;

@@ -334,6 +334,7 @@
             this.PBLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogout.TabIndex = 1;
             this.PBLogout.TabStop = false;
+            this.PBLogout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Logout_Panel_MouseDown);
             this.PBLogout.MouseEnter += new System.EventHandler(this.Logout_Panel_MouseEnter);
             this.PBLogout.MouseLeave += new System.EventHandler(this.Logout_Panel_MouseLeave);
             // 
@@ -348,6 +349,7 @@
             this.Logout.Size = new System.Drawing.Size(84, 23);
             this.Logout.TabIndex = 0;
             this.Logout.Text = "Logout";
+            this.Logout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Logout_Panel_MouseDown);
             this.Logout.MouseEnter += new System.EventHandler(this.Logout_Panel_MouseEnter);
             this.Logout.MouseLeave += new System.EventHandler(this.Logout_Panel_MouseLeave);
             // 
