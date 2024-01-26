@@ -98,6 +98,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Ben_hin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ben_hin";
             this.ResumeLayout(false);
             this.PerformLayout();

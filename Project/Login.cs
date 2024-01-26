@@ -106,5 +106,10 @@ namespace Project
                 LoginButton_Click(sender, e);
             }
         }
+
+        public string getCred()
+        {
+            return tbusername.Text;
+        }
     }
 }

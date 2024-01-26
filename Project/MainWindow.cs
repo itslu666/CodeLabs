@@ -17,6 +17,12 @@ namespace Project
             InitializeComponent();
             UC_Home uc_Home = new UC_Home();
             addUserControl(uc_Home);
+
+            LoginWindow lw = new();
+
+            string user = lw.getCred();
+            Username_LAbel.Text = $"{user}";
+            
         }
 
         private void CloseMain_Click(object sender, EventArgs e)
@@ -175,6 +181,11 @@ namespace Project
         {
             ChatbotForm cb = new ChatbotForm();
             cb.Show();  
+        }
+
+        private void Logout_Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            Close();
         }
     }
 }

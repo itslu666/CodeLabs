@@ -108,6 +108,7 @@
             this.Controls.Add(this.anrede);
             this.Controls.Add(this.nummer);
             this.Name = "Ben_bear";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ben_bear";
             this.ResumeLayout(false);
             this.PerformLayout();

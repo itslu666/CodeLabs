@@ -20,6 +20,7 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             adminLogin();
+            Close();
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -47,8 +48,6 @@ namespace Project
                 {
                     Benutzer_E eins = new Benutzer_E();
                     eins.ShowDialog();
-
-                    this.Close();
                 }
             }
         }

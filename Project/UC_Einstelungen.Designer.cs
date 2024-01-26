@@ -51,6 +51,7 @@
             this.PW_Button.TabIndex = 0;
             this.PW_Button.Text = "Passwort ändern";
             this.PW_Button.UseVisualStyleBackColor = false;
+            this.PW_Button.Click += new System.EventHandler(this.PW_Button_Click_1);
             // 
             // US_Button
             // 

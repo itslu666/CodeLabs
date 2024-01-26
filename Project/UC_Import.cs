@@ -116,5 +116,20 @@ namespace Project
         {
             Löschen_Button.BackColor = System.Drawing.Color.BlueViolet;
         }
+
+        private void Openfile_Button_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Title = "Excel Datei Aussuchen";
+            ofd.Filter = "Excel Dateien (*.xls)|*xls*";
+
+            // get filename
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string filepath = ofd.FileName;
+                ImportExcel(filepath);
+            }
+        }
     }
 }

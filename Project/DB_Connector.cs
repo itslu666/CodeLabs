@@ -10,7 +10,7 @@ namespace Project
     public class DB_Connector
     {
         public string server = "localhost";
-        public string database = "spieletraum";
+        public string database = "spieletraum-db";
         public string uid = "root";
         public string pwd = "";
         public string conString;

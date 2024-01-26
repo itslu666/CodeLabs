@@ -320,6 +320,7 @@
             this.Logout_Panel.Name = "Logout_Panel";
             this.Logout_Panel.Size = new System.Drawing.Size(218, 66);
             this.Logout_Panel.TabIndex = 4;
+            this.Logout_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Logout_Panel_MouseDown);
             this.Logout_Panel.MouseEnter += new System.EventHandler(this.Logout_Panel_MouseEnter);
             this.Logout_Panel.MouseLeave += new System.EventHandler(this.Logout_Panel_MouseLeave);
             // 

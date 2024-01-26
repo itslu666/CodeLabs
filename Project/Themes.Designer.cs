@@ -32,12 +32,12 @@
             this.Graumodus_Button = new System.Windows.Forms.Button();
             this.Standart_Button = new System.Windows.Forms.Button();
             this.Rotmodus_Button = new System.Windows.Forms.Button();
-            this.panel_Loeschen = new System.Windows.Forms.Panel();
+            this.panel_Themes = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_Loeschen = new System.Windows.Forms.Label();
             this.CloseLoeschen = new System.Windows.Forms.Button();
             this.Blaumodus_Button = new System.Windows.Forms.Button();
-            this.panel_Loeschen.SuspendLayout();
+            this.panel_Themes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,17 +69,18 @@
             this.Rotmodus_Button.Text = "Rot Modus";
             this.Rotmodus_Button.UseVisualStyleBackColor = true;
             // 
-            // panel_Loeschen
+            // panel_Themes
             // 
-            this.panel_Loeschen.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel_Loeschen.Controls.Add(this.PBLogo2);
-            this.panel_Loeschen.Controls.Add(this.Spieletraum_Loeschen);
-            this.panel_Loeschen.Controls.Add(this.CloseLoeschen);
-            this.panel_Loeschen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Loeschen.Location = new System.Drawing.Point(0, 0);
-            this.panel_Loeschen.Name = "panel_Loeschen";
-            this.panel_Loeschen.Size = new System.Drawing.Size(291, 44);
-            this.panel_Loeschen.TabIndex = 8;
+            this.panel_Themes.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel_Themes.Controls.Add(this.PBLogo2);
+            this.panel_Themes.Controls.Add(this.Spieletraum_Loeschen);
+            this.panel_Themes.Controls.Add(this.CloseLoeschen);
+            this.panel_Themes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Themes.Location = new System.Drawing.Point(0, 0);
+            this.panel_Themes.Name = "panel_Themes";
+            this.panel_Themes.Size = new System.Drawing.Size(291, 44);
+            this.panel_Themes.TabIndex = 8;
+            this.panel_Themes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Themes_MouseDown);
             // 
             // PBLogo2
             // 
@@ -90,6 +91,7 @@
             this.PBLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBLogo2.TabIndex = 8;
             this.PBLogo2.TabStop = false;
+            this.PBLogo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Themes_MouseDown);
             // 
             // Spieletraum_Loeschen
             // 
@@ -101,6 +103,7 @@
             this.Spieletraum_Loeschen.Size = new System.Drawing.Size(107, 29);
             this.Spieletraum_Loeschen.TabIndex = 1;
             this.Spieletraum_Loeschen.Text = "Themes";
+            this.Spieletraum_Loeschen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Themes_MouseDown);
             // 
             // CloseLoeschen
             // 
@@ -116,6 +119,7 @@
             this.CloseLoeschen.Size = new System.Drawing.Size(49, 44);
             this.CloseLoeschen.TabIndex = 0;
             this.CloseLoeschen.UseVisualStyleBackColor = false;
+            this.CloseLoeschen.Click += new System.EventHandler(this.CloseLoeschen_Click);
             // 
             // Blaumodus_Button
             // 
@@ -132,16 +136,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 281);
             this.Controls.Add(this.Blaumodus_Button);
-            this.Controls.Add(this.panel_Loeschen);
+            this.Controls.Add(this.panel_Themes);
             this.Controls.Add(this.Rotmodus_Button);
             this.Controls.Add(this.Standart_Button);
             this.Controls.Add(this.Graumodus_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Themes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Themes";
-            this.panel_Loeschen.ResumeLayout(false);
-            this.panel_Loeschen.PerformLayout();
+            this.Load += new System.EventHandler(this.Themes_Load);
+            this.panel_Themes.ResumeLayout(false);
+            this.panel_Themes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
             this.ResumeLayout(false);
 
@@ -152,7 +158,7 @@
         private Button Graumodus_Button;
         private Button Standart_Button;
         private Button Rotmodus_Button;
-        private Panel panel_Loeschen;
+        private Panel panel_Themes;
         private PictureBox PBLogo2;
         private Label Spieletraum_Loeschen;
         private Button CloseLoeschen;

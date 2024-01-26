@@ -40,5 +40,11 @@ namespace Project
             Check_Admin ca = new Check_Admin();
             ca.ShowDialog();
         }
+
+        private void PW_Button_Click_1(object sender, EventArgs e)
+        {
+            Pw_aendern pw = new Pw_aendern();
+            pw.ShowDialog();
+        }
     }
 }
