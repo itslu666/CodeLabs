@@ -10,38 +10,15 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Pw_aendern : Form
+    public partial class Benutzer_E : Form
     {
-        public Pw_aendern()
+        public Benutzer_E()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Benutzer_E_Load(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
-            {
-                try
-                {
-                    DB_Connector connector = new DB_Connector();
-                    connector.executeQuery($"UPDATE mitarbeiter SET passwort = '{textBox3.Text}' WHERE M_Nr = '{textBox1.Text}' AND passwort = '{textBox2.Text}'");
-                    
-                    MessageBox.Show("Passwort erfolgreich geändert.");
-                    this.Close();
-                } catch
-                {
-                    MessageBox.Show("Falscher Benutzername oder ursprüngliches Passwort.\nVersuchen Sie es erneut.");
-                }
-
-            } else
-            {
-                MessageBox.Show("Sie müssen alle felder angeben.");
-            }
-        }
-
-        private void Pw_aendern_Load(object sender, EventArgs e)
-        {
-
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             int radius = 35;
 
@@ -49,10 +26,8 @@ namespace Project
             path.AddArc(this.Width - radius, 0, radius, radius, 270, 90); //Top-right corner
             path.AddArc(this.Width - radius, this.Height - radius, radius, radius, 0, 90); //Bottom,-right corner
             path.AddArc(0, this.Height - radius, radius, radius, 90, 90); //Bottom-left corner
-
             this.Region = new Region(path); //Create a region with the rounded rectangle path and apply it to the form
         }
-
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
 
@@ -77,6 +52,24 @@ namespace Project
         private void CloseHinzufuegen_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BenutzerHIN_button_Click(object sender, EventArgs e)
+        {
+            Ben_hin bh = new Ben_hin();
+            bh.ShowDialog();
+        }
+
+        private void BenutzerBEA_button_Click(object sender, EventArgs e)
+        {
+            Ben_bear be = new Ben_bear();
+            be.ShowDialog();
+        }
+
+        private void BenutzerENT_button_Click(object sender, EventArgs e)
+        {
+            Ben_ent be = new Ben_ent();
+            be.ShowDialog();
         }
     }
 }

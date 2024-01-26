@@ -28,5 +28,17 @@ namespace Project
             ChangeServer cs = new ChangeServer();
             cs.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Themes t = new Themes();
+            t.Show();
+        }
+
+        private void BEnutzer_Button_Click(object sender, EventArgs e)
+        {
+            Check_Admin ca = new Check_Admin();
+            ca.ShowDialog();
+        }
     }
 }

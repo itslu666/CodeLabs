@@ -24,7 +24,12 @@ namespace Project
             Close();
         }
 
-
+        public void changeTheme(Color newcolor)
+        {
+            MessageBox.Show(panel1.BackColor.ToString());
+            panel1.BackColor = newcolor;
+            MessageBox.Show(panel1.BackColor.ToString());
+        }
 
 
 

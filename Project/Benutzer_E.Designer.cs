@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Pw_aendern
+    partial class Benutzer_E
     {
         /// <summary>
         /// Required designer variable.
@@ -28,53 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pw_aendern));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Benutzer_E));
             this.panel_PW = new System.Windows.Forms.Panel();
             this.PBLogo2 = new System.Windows.Forms.PictureBox();
             this.Spieletraum_PW = new System.Windows.Forms.Label();
             this.CloseHinzufuegen = new System.Windows.Forms.Button();
+            this.BenutzerHIN_button = new System.Windows.Forms.Button();
+            this.BenutzerBEA_button = new System.Windows.Forms.Button();
+            this.BenutzerENT_button = new System.Windows.Forms.Button();
             this.panel_PW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(27, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Benutzername...";
-            this.textBox1.Size = new System.Drawing.Size(248, 23);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(27, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.PlaceholderText = "Altes Passwort";
-            this.textBox2.Size = new System.Drawing.Size(248, 23);
-            this.textBox2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(114, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ändern";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(27, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.PlaceholderText = "Neus Passwort";
-            this.textBox3.Size = new System.Drawing.Size(248, 23);
-            this.textBox3.TabIndex = 3;
             // 
             // panel_PW
             // 
@@ -85,8 +49,8 @@
             this.panel_PW.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_PW.Location = new System.Drawing.Point(0, 0);
             this.panel_PW.Name = "panel_PW";
-            this.panel_PW.Size = new System.Drawing.Size(314, 44);
-            this.panel_PW.TabIndex = 7;
+            this.panel_PW.Size = new System.Drawing.Size(397, 44);
+            this.panel_PW.TabIndex = 8;
             this.panel_PW.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_PW_MouseDown);
             // 
             // PBLogo2
@@ -105,11 +69,11 @@
             this.Spieletraum_PW.AutoSize = true;
             this.Spieletraum_PW.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Spieletraum_PW.ForeColor = System.Drawing.Color.White;
-            this.Spieletraum_PW.Location = new System.Drawing.Point(58, 8);
+            this.Spieletraum_PW.Location = new System.Drawing.Point(58, 9);
             this.Spieletraum_PW.Name = "Spieletraum_PW";
-            this.Spieletraum_PW.Size = new System.Drawing.Size(211, 29);
+            this.Spieletraum_PW.Size = new System.Drawing.Size(285, 29);
             this.Spieletraum_PW.TabIndex = 1;
-            this.Spieletraum_PW.Text = "Passwort ändern";
+            this.Spieletraum_PW.Text = "Benutzer Einstellungen";
             this.Spieletraum_PW.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_PW_MouseDown);
             // 
             // CloseHinzufuegen
@@ -121,46 +85,75 @@
             this.CloseHinzufuegen.FlatAppearance.BorderSize = 0;
             this.CloseHinzufuegen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CloseHinzufuegen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseHinzufuegen.Location = new System.Drawing.Point(270, 0);
+            this.CloseHinzufuegen.Location = new System.Drawing.Point(349, 0);
             this.CloseHinzufuegen.Name = "CloseHinzufuegen";
             this.CloseHinzufuegen.Size = new System.Drawing.Size(49, 44);
             this.CloseHinzufuegen.TabIndex = 0;
             this.CloseHinzufuegen.UseVisualStyleBackColor = false;
             this.CloseHinzufuegen.Click += new System.EventHandler(this.CloseHinzufuegen_Click);
             // 
-            // Pw_aendern
+            // BenutzerHIN_button
+            // 
+            this.BenutzerHIN_button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BenutzerHIN_button.Location = new System.Drawing.Point(90, 97);
+            this.BenutzerHIN_button.Name = "BenutzerHIN_button";
+            this.BenutzerHIN_button.Size = new System.Drawing.Size(216, 48);
+            this.BenutzerHIN_button.TabIndex = 9;
+            this.BenutzerHIN_button.Text = "Benutzer Hinzufügen";
+            this.BenutzerHIN_button.UseVisualStyleBackColor = true;
+            this.BenutzerHIN_button.Click += new System.EventHandler(this.BenutzerHIN_button_Click);
+            // 
+            // BenutzerBEA_button
+            // 
+            this.BenutzerBEA_button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BenutzerBEA_button.Location = new System.Drawing.Point(90, 161);
+            this.BenutzerBEA_button.Name = "BenutzerBEA_button";
+            this.BenutzerBEA_button.Size = new System.Drawing.Size(216, 48);
+            this.BenutzerBEA_button.TabIndex = 10;
+            this.BenutzerBEA_button.Text = "Benutzer Bearbeiten";
+            this.BenutzerBEA_button.UseVisualStyleBackColor = true;
+            this.BenutzerBEA_button.Click += new System.EventHandler(this.BenutzerBEA_button_Click);
+            // 
+            // BenutzerENT_button
+            // 
+            this.BenutzerENT_button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BenutzerENT_button.Location = new System.Drawing.Point(90, 227);
+            this.BenutzerENT_button.Name = "BenutzerENT_button";
+            this.BenutzerENT_button.Size = new System.Drawing.Size(216, 48);
+            this.BenutzerENT_button.TabIndex = 11;
+            this.BenutzerENT_button.Text = "Benutzer Entfernen";
+            this.BenutzerENT_button.UseVisualStyleBackColor = true;
+            this.BenutzerENT_button.Click += new System.EventHandler(this.BenutzerENT_button_Click);
+            // 
+            // Benutzer_E
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 278);
+            this.ClientSize = new System.Drawing.Size(397, 373);
+            this.Controls.Add(this.BenutzerENT_button);
+            this.Controls.Add(this.BenutzerBEA_button);
+            this.Controls.Add(this.BenutzerHIN_button);
             this.Controls.Add(this.panel_PW);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Pw_aendern";
+            this.Name = "Benutzer_E";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pw_aendern";
-            this.Load += new System.EventHandler(this.Pw_aendern_Load);
+            this.Text = "Benutzer_E";
+            this.Load += new System.EventHandler(this.Benutzer_E_Load);
             this.panel_PW.ResumeLayout(false);
             this.panel_PW.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private TextBox textBox3;
         private Panel panel_PW;
         private PictureBox PBLogo2;
         private Label Spieletraum_PW;
         private Button CloseHinzufuegen;
+        private Button BenutzerHIN_button;
+        private Button BenutzerBEA_button;
+        private Button BenutzerENT_button;
     }
 }

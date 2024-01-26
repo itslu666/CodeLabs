@@ -16,5 +16,12 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void Graumodus_Button_Click(object sender, EventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.changeTheme(Color.White);
+            mw.Close();
+        }
     }
 }

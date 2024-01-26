@@ -49,6 +49,7 @@
             this.Graumodus_Button.TabIndex = 0;
             this.Graumodus_Button.Text = "Grau Modus";
             this.Graumodus_Button.UseVisualStyleBackColor = true;
+            this.Graumodus_Button.Click += new System.EventHandler(this.Graumodus_Button_Click);
             // 
             // Standart_Button
             // 

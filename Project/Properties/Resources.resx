@@ -124,9 +124,6 @@
   <data name="GREY-GEAR-LOADING" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GREY-GEAR-LOADING.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Searchwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Searchwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +154,9 @@
   <data name="Circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Create" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="glatte-elegante-farbverlauf-lila-hintergrund_1258-1372-ezgif1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glatte-elegante-farbverlauf-lila-hintergrund_1258-1372-ezgif.com-avif-to-png-converter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,6 +165,9 @@
   </data>
   <data name="purple-blue-7252901_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\purple-blue-7252901_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spreadsheet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spreadsheet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Circlewhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circlewhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,23 +205,23 @@
   <data name="b61a6cf83ad7755c1e377888b1d75943" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b61a6cf83ad7755c1e377888b1d75943.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ezgif-3-c6ed8022f3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ezgif-3-c6ed8022f3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close.weißsmallpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close.weißsmallpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sentweiß" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sentweiß.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Spreadsheet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Spreadsheet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="polish-cow-dancing-cow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\polish-cow-dancing-cow.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ezgif-3-c6ed8022f3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif-3-c6ed8022f3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Import File" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Import File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="polish-cow-dancing-cow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\polish-cow-dancing-cow.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Searchwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Searchwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot 2024-01-16 092552" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-01-16 092552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,13 +250,13 @@
   <data name="Spieltraum_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spieltraum_Logo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6279044fe9638759c7f937b2_5c547cb9347adc122021ae3e_ROBOMG_ROBOT_LOOP.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close.weißsmallpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close.weißsmallpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spinning-monkey-monkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spinning-monkey-monkey.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Create" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
