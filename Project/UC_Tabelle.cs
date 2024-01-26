@@ -233,6 +233,28 @@ namespace Project
 
 
 
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void UpdateDataGridView<T>(List<T> filteredList)
+        {
+            dataGridView1.Rows.Clear();
+
+            foreach (var item in filteredList)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+
+                foreach (var prop in item.GetType().GetProperties())
+                {
+                    row.Cells.Add(new DataGridViewTextBoxCell { Value = prop.GetValue(item)?.ToString() ?? string.Empty });
+                }
+
+                dataGridView1.Rows.Add(row);
+            }
+        }
 
 
 
@@ -327,9 +349,6 @@ namespace Project
                 {
                     try
                     {
-                        // Ausgabe der Anzahl der Zeilen in der DataGridView
-                        Console.WriteLine($"Anzahl der Zeilen in der DataGridView: {dataGridView1.Rows.Count}");
-
                         if (dataGridView1 != null && dataGridView1.Rows.Count > 0)
                         {
                             // Verwenden der ClosedXML-Bibliothek zum Erstellen und Bearbeiten von Excel-Arbeitsmappen
@@ -358,26 +377,18 @@ namespace Project
                                 // Excel-Arbeitsmappe speichern
                                 workbook.SaveAs(sfd.FileName);
 
-                                Console.WriteLine("Daten erfolgreich in Excel-Datei exportiert.");
-                                MessageBox.Show("Daten erfolgreich in Excel-Datei exportiert.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Daten erfolgreich in Excel-Datei exportiert.");
                             }
                         }
                         else
                         {
-                            Console.WriteLine("Die DataGridView enthält keine Daten zum Exportieren.");
                             MessageBox.Show("Die DataGridView enthält keine Daten zum Exportieren.", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     catch (Exception ex)
                     {
-                        // Fehlerbehandlung im Falle eines Exportfehlers
-                        Console.WriteLine($"Fehler beim Exportieren der Daten: {ex.Message}");
                         MessageBox.Show($"Fehler beim Exportieren der Daten: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else if (result == DialogResult.Cancel)
-                {
-                    Console.WriteLine("Der Dialog wurde abgebrochen.");
                 }
             }
         }
@@ -396,6 +407,53 @@ namespace Project
         {
             MetaData_Form metaData_Form = new MetaData_Form();
             metaData_Form.ShowDialog();
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            string searchTerm = Suchleiste.Text.ToLower(); // tolower to not case sensitive
+
+            // Überprüfe, welche Tabelle gerade angezeigt wird
+            if (dataGridView1.Columns.Contains("art_nr"))
+            {
+                // Suche in der Artikel-Tabelle
+                var filteredArtikelList = artikelList.Where(art => art.Bezeichnung.ToLower().Contains(searchTerm) ||
+                                                                  art.Description.ToLower().Contains(searchTerm) ||
+                                                                  art.Price.ToString().ToLower().Contains(searchTerm) ||
+                                                                  art.Wg_nr.ToString().ToLower().Contains(searchTerm)).ToList();
+
+                // Aktualisiere die DataGridView mit den gefilterten Daten
+                UpdateDataGridView(filteredArtikelList);
+            }
+            else if (dataGridView1.Columns.Contains("k_nr"))
+            {
+                // Suche in der Kunden-Tabelle
+                var filteredKundenList = kundenList.Where(kunde => kunde.Anrede.ToLower().Contains(searchTerm) ||
+                                                                   kunde.Name.ToLower().Contains(searchTerm) ||
+                                                                   kunde.Vorname.ToLower().Contains(searchTerm) ||
+                                                                   kunde.Straße.ToLower().Contains(searchTerm) ||
+                                                                   kunde.Plz.ToString().ToLower().Contains(searchTerm) ||
+                                                                   kunde.Ort.ToLower().Contains(searchTerm) ||
+                                                                   kunde.Mail.ToLower().Contains(searchTerm) ||
+                                                                   kunde.Tel.ToString().ToLower().Contains(searchTerm) ||
+                                                                   kunde.Kat_nr.ToString().ToLower().Contains(searchTerm)).ToList();
+
+                // Aktualisiere die DataGridView mit den gefilterten Daten
+                UpdateDataGridView(filteredKundenList);
+            }
+            else if (dataGridView1.Columns.Contains("l_nr"))
+            {
+                // Suche in der Lieferanten-Tabelle
+                var filteredLieferantList = lieferantList.Where(lieferant => lieferant.Name.ToLower().Contains(searchTerm) ||
+                                                                            lieferant.Straße.ToLower().Contains(searchTerm) ||
+                                                                            lieferant.Plz.ToLower().Contains(searchTerm) ||
+                                                                            lieferant.Ort.ToLower().Contains(searchTerm) ||
+                                                                            lieferant.Mail.ToLower().Contains(searchTerm) ||
+                                                                            lieferant.Tel.ToString().ToLower().Contains(searchTerm)).ToList();
+
+                // Aktualisiere die DataGridView mit den gefilterten Daten
+                UpdateDataGridView(filteredLieferantList);
+            }
         }
     }
 }
